@@ -1,5 +1,6 @@
 ---
 title: SpringSecurity 配置与使用（含新 API 替换过时的 WebSecurityConfigurerAdapter）
+date: 2022-11-15 21:01:19
 cover: https://spring.io/images/sp1/sp1-light-c8cb6df9f8c64c5d3701071d7c679df6.svg
 ---
 # 前言
