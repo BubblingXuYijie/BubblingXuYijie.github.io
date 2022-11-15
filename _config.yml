@@ -70,7 +70,7 @@ search:
   path: search.xml
   field: post
   content: true
-  template: ./search.xml
+#  template: ./search.xml
 
 # Category & Tag
 default_category: uncategorized
