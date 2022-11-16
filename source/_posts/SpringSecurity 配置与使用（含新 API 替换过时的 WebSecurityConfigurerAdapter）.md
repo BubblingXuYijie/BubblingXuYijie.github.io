@@ -1,7 +1,11 @@
 ---
 title: SpringSecurity 配置与使用（含新 API 替换过时的 WebSecurityConfigurerAdapter）
-date: 2022-11-15 15:01:19
-cover: https://spring.io/images/sp1/sp1-light-c8cb6df9f8c64c5d3701071d7c679df6.svg
+date: 2022-10-28 11:13:27
+categories: Java
+tags: 
+    - SpringBoot
+    - SpringSecurity
+cover: /img/springbootLogo.jpeg
 ---
 # 前言
 As we all know，现今主流权限框架有 SpringSecurity、Shiro、SaToken，Shiro在前后端分离时代基本被淘汰，剩下适合大型项目的 `SpringSecurity` 和 适合中小型项目的 `SaToken` 可以选择，SaToken 我也写了文章 [Springboot 使用 SaToken 进行登录认证、权限管理以及路由规则接口拦截](https://blog.csdn.net/qq_48922459/article/details/127048667?spm=1001.2014.3001.5501)
