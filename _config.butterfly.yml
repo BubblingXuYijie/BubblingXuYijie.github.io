@@ -35,10 +35,10 @@ copy:
 # formal:
 #   icon: link || the description
 social:
- fa-brands fa-qq: tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1119461672&website=www.oicqzone.com || QQ
- fa-brands fa-telegram: https://t.me/xuyijie || Telegram
  fa-solid fa-blog: https://blog.csdn.net/qq_48922459 || CSDN
  fas fa-envelope: mailto:1119461672@qq.com || Email
+ fa-brands fa-telegram: https://t.me/xuyijie || Telegram
+ fa-brands fa-qq: tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1119461672&website=www.oicqzone.com || QQ
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -78,11 +78,11 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: /img/android-chrome-192x192.png
 
 # Avatar (頭像)
 avatar:
-  img: https://qiniuoss.xuyijie.icu/community_interaction_system/user_head/182382641051648891248098.jpeg
+  img: /img/182382641051648891248098.jpeg
   effect: false
 
 # Disable all banner image
@@ -306,11 +306,12 @@ gitalk:
 # valine
 # https://valine.js.org
 valine:
-  appId: # leancloud application app id
-  appKey: # leancloud application app key
+  appId: hkhwUbLes3CPVXrOaA5GWlEC-9Nh9j0Va # leancloud application app id
+  appKey: yjP1tNi7HQcdN3abvEzimV0Y # leancloud application app key
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
-  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
+  serverURLs: https://leancloud.xuyijie.icu # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: # valine background
+  recordIP: true
   visitor: false
   option:
 
@@ -394,8 +395,8 @@ chatra:
 # tidio
 # https://www.tidio.com/
 tidio:
-  enable: false
-  public_key:
+  enable: true
+  public_key: 9rfawxoiu99lc40ynelt5vvxgkhickux
 
 # daovoice
 # http://daovoice.io/
