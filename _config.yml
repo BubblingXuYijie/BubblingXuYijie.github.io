@@ -112,6 +112,6 @@ theme: butterfly
 deploy:
   type: git
 #  repo: git@github.com:BubblingXuYijie/BubblingXuYijie.github.io.git
-  repo: git@gitee.com:BubblingXuYijie/BubblingXuYijie.gitee.io.git
+  repo: git@gitee.com:BubblingXuYijie/BubblingXuYijie
   branch: gh-pages
   message: Site updated at {{ now("YYYY-MM-DD HH:mm:ss") }}
