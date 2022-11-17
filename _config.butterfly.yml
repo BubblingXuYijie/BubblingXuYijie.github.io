@@ -715,7 +715,7 @@ aside:
       link: https://github.com/BubblingXuYijie
   card_announcement:
     enable: true
-    content: 博文和本人的CSDN同步，有问题可以点击右下角齿轮和我聊天或者评论文章哦。（Blogs is synchronized with my CSDN.If you have any questions, you can click the lower right gear to chat with me or comment on the article.）
+    content: 博文和本人的CSDN同步，有问题可以点击右下角图标和我聊天或者评论文章哦。（Blogs is synchronized with my CSDN.If you have any questions, you can click the lower right gear to chat with me or comment on the article.）
   card_recent_post:
     enable: false
     limit: 5 # if set 0 will show all
