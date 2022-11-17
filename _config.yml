@@ -13,8 +13,8 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-#url: https://bubblingxuyijie.github.io
-url: https://bubblingxuyijie.gitee.io
+url: https://bubblingxuyijie.github.io
+#url: https://bubblingxuyijie.gitee.io
 #root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -112,7 +112,7 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-#  repo: git@github.com:BubblingXuYijie/BubblingXuYijie.github.io.git
-  repo: git@gitee.com:BubblingXuYijie/BubblingXuYijie.git
+  repo: git@github.com:BubblingXuYijie/BubblingXuYijie.github.io.git
+#  repo: git@gitee.com:BubblingXuYijie/BubblingXuYijie.git
   branch: gh-pages
   message: Site updated at {{ now("YYYY-MM-DD HH:mm:ss") }}
