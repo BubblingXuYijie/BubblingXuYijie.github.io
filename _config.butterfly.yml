@@ -35,6 +35,7 @@ copy:
 # formal:
 #   icon: link || the description
 social:
+ fab fa-github: https://github.com/BubblingXuYijie || GITHUB
  fa-solid fa-blog: https://blog.csdn.net/qq_48922459 || CSDN
  fas fa-envelope: mailto:1119461672@qq.com || Email
  fa-brands fa-telegram: https://t.me/xuyijie || Telegram
@@ -710,9 +711,9 @@ aside:
     description: 编程技术、代码资源、各类技术、各种工具、影视资源分享
     button:
       enable: true
-      icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/BubblingXuYijie
+      icon:
+      text: 泡泡的Infinity
+      link: https://xuyijie.icu
   card_announcement:
     enable: true
     content: 博文和本人的CSDN同步，有问题可以点击右下角图标和我聊天或者评论文章哦。（Blogs is synchronized with my CSDN.If you have any questions, you can click the lower right gear to chat with me or comment on the article.）
