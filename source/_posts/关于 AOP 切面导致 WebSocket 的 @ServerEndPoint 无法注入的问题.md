@@ -6,7 +6,7 @@ tags:
     - WebSocket
     - SpringBoot
     - AOP
-cover: /img/springbootLogo.jpeg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 ---
 # 前言
 

@@ -5,7 +5,7 @@ categories: Python
 tags:
     - Python
     - 高德API
-cover: /img/PythonLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PythonLogo.jpg
 ---
 # 前言
 

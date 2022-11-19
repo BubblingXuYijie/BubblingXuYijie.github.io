@@ -4,7 +4,7 @@ date: 2021-05-10 11:16:47
 categories: Web前端
 tags:
     - Vue
-cover: /img/Vue.jpeg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Vue.jpeg
 ---
 # 一、Query传参
 

@@ -5,7 +5,7 @@ categories: Java
 tags:
     - SpringBoot
     - RabbitMQ
-cover: /img/RabbitMQ.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/RabbitMQ.jpg
 ---
 # 前言
 

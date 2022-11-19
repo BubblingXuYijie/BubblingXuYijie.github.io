@@ -2,7 +2,7 @@
 title: Java运行非Web的Springboot项目（测试类或启动主类两种方法）
 date: 2021-12-05 14:04:19
 categories: Java
-cover: /img/springbootLogo.jpeg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 ---
 # 前言
 

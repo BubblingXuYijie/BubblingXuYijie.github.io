@@ -5,7 +5,7 @@ categories: Java
 tags:
     - SpringBoot
     - Elasticsearch
-cover: /img/elasticsearch.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/elasticsearch.jpg
 ---
 # 前言
 > `elasticsearch`：就是一个很快很快的搜索引擎，使用场景就是像网易词典这种，输入几个相关文字，就可以从几百万个单词中瞬间找到匹配的翻译，这种海量数据的模糊搜索在关系型数据库中是不可能的，所以这时候就要用到elasticsearch了，但是它和 MongoDB 这种文档型数据库有什么区别，有没有懂的可以在评论区教教我，我是没有搞懂

@@ -4,7 +4,7 @@ date: 2022-02-24 17:16:15
 categories: Java
 tags:
     - Java
-cover: /img/javaLogo.png
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/javaLogo.png
 ---
 # 一、前言
 <font color=#999AAA >批量读取文件夹内的文件，并替换各个文件的内容

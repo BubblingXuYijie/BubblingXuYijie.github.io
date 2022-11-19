@@ -6,7 +6,7 @@ tags:
     - SpringBoot
     - Nginx
     - Linux
-cover: /img/NginxLogo.png
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/NginxLogo.png
 ---
 # 前言
 

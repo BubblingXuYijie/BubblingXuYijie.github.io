@@ -6,7 +6,7 @@ tags:
     - Linux
     - CentOS
     - yum
-cover: /img/LinuxLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/LinuxLogo.jpg
 ---
 # 前言
 

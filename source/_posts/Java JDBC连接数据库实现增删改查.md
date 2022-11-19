@@ -6,7 +6,7 @@ tags:
     - Java
     - SpringBoot
     - MySQL
-cover: /img/javaLogo.png
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/javaLogo.png
 ---
 # 前言
 

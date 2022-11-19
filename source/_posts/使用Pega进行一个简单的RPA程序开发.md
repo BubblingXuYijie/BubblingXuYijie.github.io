@@ -5,7 +5,7 @@ categories: Pega
 tags:
     - Pega
     - RPA
-cover: /img/PegaLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaLogo.jpg
 ---
 # 前言
 

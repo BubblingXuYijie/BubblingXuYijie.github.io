@@ -2,7 +2,7 @@
 title: Java 实现 Springboot 定时任务（每隔一段时间自动执行一次）
 date: 2021-12-02 23:27:41
 categories: Java
-cover: /img/javaLogo.png
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/javaLogo.png
 ---
 # 前言
 

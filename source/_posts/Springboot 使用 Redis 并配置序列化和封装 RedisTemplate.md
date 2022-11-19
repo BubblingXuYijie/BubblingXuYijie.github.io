@@ -6,7 +6,7 @@ tags:
     - SpringBoot
     - Redis
     - Lettuce
-cover: /img/Redis.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Redis.jpg
 ---
 # 前言
 >为什么要配置序列化：如果不配置序列化的话，我们在redis数据库中存储的数据可能以乱码形式显示出来，不方便我们判断数据存储的正确性，说白了就是序列化以后存进去的是什么，查询出来的就是什么，否则我们的键值都会变成一串看不懂的乱码。

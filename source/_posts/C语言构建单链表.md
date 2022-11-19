@@ -4,7 +4,7 @@ date: 2020-06-29 19:36:10
 categories: C
 tags:
     - C
-cover: /img/CLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/CLogo.jpg
 ---
 ## 源码
 ```c

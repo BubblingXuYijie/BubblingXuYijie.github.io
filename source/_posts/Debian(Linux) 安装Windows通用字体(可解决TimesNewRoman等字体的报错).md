@@ -6,7 +6,7 @@ tags:
     - Debian
     - Linux
     - Ubuntu
-cover: /img/LinuxLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/LinuxLogo.jpg
 ---
 # 前言
 最近写了个小玩意儿，PDF转Word，体验很棒，图片和插画都能识别出来正确转换，可是部署到线上以后，转换会有Arial和TImesNewRoman字体的报错

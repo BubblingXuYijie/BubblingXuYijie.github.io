@@ -7,7 +7,7 @@ tags:
     - SpringBoot
     - SM4
     - 数据加密
-cover: /img/springbootLogo.jpeg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 ---
 # 前言
 

@@ -5,7 +5,7 @@ categories: Java
 tags: 
     - SpringBoot
     - SpringSecurity
-cover: /img/springbootLogo.jpeg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 ---
 # 前言
 As we all know，现今主流权限框架有 SpringSecurity、Shiro、SaToken，Shiro在前后端分离时代基本被淘汰，剩下适合大型项目的 `SpringSecurity` 和 适合中小型项目的 `SaToken` 可以选择，SaToken 我也写了文章 [Springboot 使用 SaToken 进行登录认证、权限管理以及路由规则接口拦截](https://blog.csdn.net/qq_48922459/article/details/127048667?spm=1001.2014.3001.5501)

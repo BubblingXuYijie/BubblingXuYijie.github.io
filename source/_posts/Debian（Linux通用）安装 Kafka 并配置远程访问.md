@@ -6,7 +6,7 @@ tags:
     - Debian
     - Linux
     - Kafka
-cover: /img/Kafka.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Kafka.jpg
 ---
 # 前言
 > As we all know，当今世界最流行的消息中间件有 RabbitMq、RocketMq、Kafka，其中，应用最广泛的是 `RabbitMq`，`RocketMq` 是阿里巴巴的产品，性能超过 RabbitMq，已经经受了多年的双11考验，但是怕哪天阿里不维护了，用的人不多，`Kafka` 是吞吐量最大的一个，远超前两个，支持事务、可保证消息的不丢失（网上说的事务和消息可靠性不支持是说的旧版，2以后就开始支持了），对比来讲，Kafka相对于前两个，只有一个劣势，不太支持延时队列，其他方面都要优于它们（个人使用体验，勿喷）。

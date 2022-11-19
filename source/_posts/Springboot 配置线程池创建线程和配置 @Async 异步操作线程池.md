@@ -7,7 +7,7 @@ tags:
     - 异步
     - 多线程
     - 线程池
-cover: /img/springbootLogo.jpeg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 ---
 # 前言
 > 众所周知，创建显示线程和直接使用未配置的线程池创建线程，都会被阿里的大佬给diss，所以我们要规范的创建线程。

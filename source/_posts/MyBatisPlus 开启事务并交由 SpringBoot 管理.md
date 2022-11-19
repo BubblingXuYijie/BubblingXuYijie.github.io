@@ -6,7 +6,7 @@ tags:
     - MyBatisPlus
     - SpringBoot
     - 事务
-cover: /img/LinuxLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/LinuxLogo.jpg
 ---
 # 前言
 

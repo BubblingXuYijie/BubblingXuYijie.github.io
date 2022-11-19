@@ -5,7 +5,7 @@ categories: Java
 tags:
     - SpringBoot
     - EasyExcel
-cover: /img/EasyexcelLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/EasyexcelLogo.jpg
 ---
 # 前言
 >太详细了，转载做笔记用，原文作者如下，我又加了点自己的详细示例

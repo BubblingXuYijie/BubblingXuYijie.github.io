@@ -5,7 +5,7 @@ categories: Java
 tags:
     - SpringBoot
     - Kafka
-cover: /img/Kafka.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Kafka.jpg
 ---
 # 前言
 不多BB讲原理，只教你怎么用，看了全网没有比我更详细的了，yml 配置，Config 工厂代码配置都有，batch-size、acks、offset、auto-commit、trusted-packages、poll-timeout、linger 应有尽有，批量消费、开启事务、定义批量消费数量、延时发送、失败重试、异常处理你还想要什么

@@ -5,7 +5,7 @@ categories: Java
 tags:
     - SpringBoot
     - Retrofit
-cover: /img/RetrofitLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/RetrofitLogo.jpg
 ---
 # 前言
 

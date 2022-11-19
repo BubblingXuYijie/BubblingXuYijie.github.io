@@ -4,7 +4,7 @@ date: 2022-02-16 21:59:29
 categories: Web前端
 tags:
     - Vue
-cover: /img/Vue.jpeg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Vue.jpeg
 ---
 # 报错原因
 

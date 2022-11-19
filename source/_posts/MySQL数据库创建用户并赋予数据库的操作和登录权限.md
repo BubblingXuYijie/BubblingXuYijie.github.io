@@ -5,7 +5,7 @@ categories: 数据库
 tags:
     - MySQL
     - 数据库
-cover: /img/MysqlLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MysqlLogo.jpg
 ---
 #  前言
 <font color=#999AAA >两种方法，第一种方法确保你的账号拥有全部权限，你安装数据库的时候默认的 root 用户就拥有全部权限。</font>

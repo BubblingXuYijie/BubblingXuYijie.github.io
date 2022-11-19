@@ -5,7 +5,7 @@ categories: Linux
 tags:
     - SpringBoot
     - hibernate
-cover: /img/hibernateLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/hibernateLogo.jpg
 ---
 # 前言
 > 有些业务比较复杂，比如我们需要新建10张表，每张表有10个字段，如果用手工来操作，肯定非常浪费时间，而且随着代码中对实体类的修改，还要同时修改数据库表，有时候写着写着就忘了，代码改了，数据库没改，这种问题使用 hibernate 的自动建表就好啦。

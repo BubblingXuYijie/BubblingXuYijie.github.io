@@ -7,7 +7,7 @@ tags:
     - SpringBoot
     - Nacos
     - Docker
-cover: /img/NacosLogo.png
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/NacosLogo.png
 ---
 # 前言
 

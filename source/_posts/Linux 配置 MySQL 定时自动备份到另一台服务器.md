@@ -6,7 +6,7 @@ tags:
     - Linux
     - MySQL
     - Shell脚本
-cover: /img/MysqlLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MysqlLogo.jpg
 ---
 # 前言
 

@@ -7,7 +7,7 @@ tags:
     - Hikari
     - 事务
     - MyBatisPlus
-cover: /img/springbootLogo.jpeg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 ---
 # 前言
 

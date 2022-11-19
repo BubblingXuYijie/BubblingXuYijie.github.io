@@ -6,7 +6,7 @@ tags:
     - Linux
     - Docker
     - apt
-cover: /img/DockerLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DockerLogo.jpg
 ---
 # 前言
 

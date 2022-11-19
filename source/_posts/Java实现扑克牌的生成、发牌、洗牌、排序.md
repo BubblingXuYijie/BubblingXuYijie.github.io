@@ -2,7 +2,7 @@
 title: Java实现扑克牌的生成、发牌、洗牌、排序
 date: 2020-06-24 20:31:49
 categories: Java
-cover: /img/javaLogo.png
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/javaLogo.png
 ---
 ## 需求
 生成一副斗地主的扑克牌

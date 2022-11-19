@@ -4,7 +4,7 @@ date: 2020-06-29 20:07:34
 categories: C
 tags:
     - C
-cover: /img/CLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/CLogo.jpg
 ---
 ## 前言
 只是单纯喜欢C语言，闲着无事把以前学习的时候的案例编了一下，都是很基础的代码，for,swich,if这些，基础好的看完后完全可以自己写出这种小游戏

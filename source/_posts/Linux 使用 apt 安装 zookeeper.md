@@ -6,7 +6,7 @@ tags:
     - Linux
     - apt
     - zookeeper
-cover: /img/zookeeper.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/zookeeper.jpg
 ---
 # 前言
 

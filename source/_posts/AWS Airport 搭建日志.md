@@ -7,7 +7,7 @@ tags:
     - AWS
     - 虚拟专用网络
     - 网络
-cover: /img/shadowsocksLogo.png
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/shadowsocksLogo.png
 ---
 # 前言
 `仅供学习交流，为了我们大家好，不要在网络上传播本篇内容`

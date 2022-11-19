@@ -2,7 +2,7 @@
 title: Java非Web的Springboot项目打包部署到Linux服务器并运行（Maven、Gradle）
 date: 2021-12-04 17:58:29
 categories: Linux
-cover: /img/springbootLogo.jpeg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 ---
 # 前言
 

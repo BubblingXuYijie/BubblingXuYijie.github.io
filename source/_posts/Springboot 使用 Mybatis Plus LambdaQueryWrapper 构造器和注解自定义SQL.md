@@ -6,7 +6,7 @@ tags:
     - SpringBoot
     - MyBatisPlus
     - Lambda
-cover: /img/MyBatisPlusLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MyBatisPlusLogo.jpg
 ---
 # 前言
 > MyBatis-Plus 是一个 MyBatis (opens new window)的增强工具，在 MyBatis 的基础上只做增强不做改变，MyBatis 可以无损升级为MyBatis-Plus，只需要更换一下pom依赖即可。

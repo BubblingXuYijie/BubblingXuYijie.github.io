@@ -5,7 +5,7 @@ categories: Web前端
 tags:
     - HTML
     - CSS
-cover: /img/HtmlCssLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/HtmlCssLogo.jpg
 ---
 ## 代码
 

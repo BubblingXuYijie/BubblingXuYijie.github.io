@@ -4,7 +4,7 @@ date: 2021-12-08 21:50:41
 categories: Java
 tags:
     - SpringBoot
-cover: /img/springbootLogo.jpeg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 ---
 # 前言
 

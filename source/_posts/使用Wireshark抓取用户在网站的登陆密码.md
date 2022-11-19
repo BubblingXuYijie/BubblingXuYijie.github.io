@@ -5,7 +5,7 @@ categories: 网络
 tags:
     - Wireshark
     - 网络
-cover: /img/WireShark.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/WireShark.jpg
 sticky: 2
 ---
 # 下载Wireshark

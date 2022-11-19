@@ -6,7 +6,7 @@ tags:
     - Pega
     - RPA
     - BPM
-cover: /img/PegaLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaLogo.jpg
 ---
 #  前言
 `Pega's BPM study notes`

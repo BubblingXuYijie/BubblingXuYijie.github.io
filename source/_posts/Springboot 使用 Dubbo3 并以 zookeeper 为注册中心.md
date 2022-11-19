@@ -8,7 +8,7 @@ tags:
     - zookeeper
     - 微服务
     - RPC
-cover: /img/Dubbo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Dubbo.jpg
 ---
 # 前言
 > `dubbo`：简单来讲就是一个 RPC 调用框架，类似于 SpringCloud + OpenFeign，支持 nacos、zookeeper 等注册中心，拥有图形界面，可使用界面管理 zookeeper 的节点信息

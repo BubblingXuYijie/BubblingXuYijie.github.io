@@ -4,7 +4,7 @@ date: 2021-12-30 10:25:28
 categories: Linux
 tags:
     - Linux
-cover: /img/LinuxLogo.jpg
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/LinuxLogo.jpg
 ---
 # 前言
 
