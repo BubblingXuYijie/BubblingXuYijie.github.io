@@ -20,24 +20,24 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/elasticsearch.jpg
 ## 2、Linux安装
 
 ```bash
-# 导入公钥
+# 导入公钥，如果报错gpg，则先apt install gpg一下就可以了，如果报错sudo，则去掉命令中的sudo
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
 # 添加elasticsearch到仓库
 echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
 # 更新仓库，安装
 sudo apt update
 sudo apt install elasticsearch
+# 开启外网访问，把这个文件里的 network.host 改为 0.0.0.0
+# elasticsearch版本 7.0、8.0 以上还需要修改 xpack-security.enable 为 false，如果不使用 ssl，也设置为 false，如下图
+sudo vim /etc/elasticsearch/elasticsearch.yml
 # 启动服务
 sudo systemctl start elasticsearch.service
-# 设置开机启动
+# 设置开机启动（可选）
 sudo systemctl enable elasticsearch.service
-# 开启外网访问，把这个文件里的 network.host 改为 0.0.0.0
-sudo vim /etc/elasticsearch/elasticsearch.yml
-# elasticsearch版本 8.0 以上还需要修改 xpack-security.enable 为 false
-# 重启服务
-sudo systemctl restart elasticsearch.service
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0a6849f927014a11814e0c54788f02ee.png)![在这里插入图片描述](https://img-blog.csdnimg.cn/22e4addb640e4727957993c5c5495491.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/0a6849f927014a11814e0c54788f02ee.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/fc354c7212b041d1bf56be7e8ac7c1e3.png)
+
 不要忘记开放防火墙端口，控制台输入`curl -X GET "localhost:9200/"`或浏览器访问 `IP:9200`
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/27afbe9e882f4c6fa7f762513a23ae49.png)
