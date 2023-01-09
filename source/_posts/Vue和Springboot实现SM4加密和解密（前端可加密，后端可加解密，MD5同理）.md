@@ -1,5 +1,5 @@
 ---
-title: Vue和Springboot实现SM4加密和解密（前端可加密，后端可加解密，MD5同理）
+title: Vue和Springboot实现SM4加密和解密（前、后端均可）
 date: 2021-12-24 17:00:05
 categories: Java
 tags:
@@ -26,7 +26,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>SM4Utils</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 
@@ -166,7 +166,7 @@ methods:{
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>SM4Utils</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 
