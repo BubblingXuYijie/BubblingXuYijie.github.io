@@ -495,10 +495,11 @@ public class KafkaHandler {
         try {
             //用于测试异常处理
             //int i = 1 / 0;
-            System.out.println(consumerRecord.value());
-        } finally {
+            System.out.println(consumerRecord.get(0).value());
             //手动确认
             ack.acknowledge();
+        } catch (Exception e) {
+            System.out.println("消费失败：" + e);
         }
     }
 
