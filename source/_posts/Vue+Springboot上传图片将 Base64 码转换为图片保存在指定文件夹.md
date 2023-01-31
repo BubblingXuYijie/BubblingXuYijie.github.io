@@ -24,33 +24,20 @@ vant插件默认的图片从前端上传到后端，是以 base64 码的形式�
 ```html
 <van-uploader :after-read="uploadImg" preview-size="50px" v-model="userHead" :max-count="1" />
 
-
 <script>
 methods:{
-
 	submit(){
-	      if (this.sex === ''){
-	        Notify({type: 'success', message:'请务必选择性别'})
-	      }else {
-	        this.$axios
-	            .post("/user/userInfo", {
-	              //userHead传给后台的是一串base64，后台要进行转化
-	              userHead : this.file,
-	              username : this.username,
-	              sex : this.sex,
-	              age : this.age,
-	              homeTown: this.placeResult
-	            })
-	            .then(successResponse => {
-	              console.log(successResponse)
-	              this.$router.replace({path:'/home/mine'})
-	              Notify({type: 'success', message:'保存成功'})
-	            })
-	}
+        this.$axios
+            .post("/user/userInfo", {
+              //userHead传给后台的是一串base64，后台要进行转化
+              userHead : this.file,
+              username : this.username,
+            })
+            .then(successResponse => {
+              console.log(successResponse)
+            })
 }
-
 </script>
-
 
 ```
 
@@ -68,7 +55,7 @@ methods:{
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>Base64Utils</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 ```java
