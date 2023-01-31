@@ -26,16 +26,17 @@ vant插件默认的图片从前端上传到后端，是以 base64 码的形式�
 
 <script>
 methods:{
-	submit(){
+    submit() {
         this.$axios
             .post("/user/userInfo", {
-              //userHead传给后台的是一串base64，后台要进行转化
-              userHead : this.file,
-              username : this.username,
+                //userHead传给后台的是一串base64，后台要进行转化
+                userHead: this.file,
+                username: this.username,
             })
             .then(successResponse => {
-              console.log(successResponse)
+                console.log(successResponse)
             })
+    }
 }
 </script>
 
