@@ -432,7 +432,7 @@ footer:
   owner:
     enable: true
     since: 2021
-  custom_text: 很开心你能访问我的网站ヾ(^▽^*))) #<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33030402001209"><img class="icp-icon" src="/img/beianIcon.png"><span>浙公网安备33030402001209号</span></a>
+  custom_text: 很开心见到你ヾ(^▽^*))) #<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33030402001209"><img class="icp-icon" src="/img/beianIcon.png"><span>浙公网安备33030402001209号</span></a>
   copyright: true # Copyright of theme and framework
 
 # Analysis
