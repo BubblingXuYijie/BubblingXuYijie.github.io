@@ -114,7 +114,7 @@ public class LogTraceInterceptor implements HandlerInterceptor {
 
 ---
 
-# 三、配置logBack
+# 四、配置logBack
 > 请看xml里面的注释
 
 ```xml
@@ -142,7 +142,7 @@ public class LogTraceInterceptor implements HandlerInterceptor {
 
 ---
 
-# 四、查看追踪效果
+# 五、查看追踪效果
 
 > 大家请看，下面的日志开头，多了一串`UUID`，这就是`traceId`，相同的代表是同一个请求的日志，不同代表是不同请求打印的日志。
 
@@ -151,7 +151,7 @@ public class LogTraceInterceptor implements HandlerInterceptor {
 
 ---
 
-# 五、要解决traceId传递问题
+# 六、要解决traceId传递问题
 
 ## 1、在不同线程之间的传递
 > 这个问题需要重写线程池，在线程池启动线程之前，为当前线程copy一份traceId，需要下面3个代码文件
