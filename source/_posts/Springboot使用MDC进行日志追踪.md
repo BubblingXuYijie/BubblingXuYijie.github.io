@@ -123,7 +123,7 @@ public class LogTraceInterceptor implements HandlerInterceptor {
 
 ---
 
-# 四、要解决tranceId传递问题
+# 四、要解决traceId传递问题
 
 ## 1、在不同线程之间的传递
 > 这个问题需要重写线程池，在线程池启动线程之前，为当前线程copy一份traceId，需要下面3个代码文件
@@ -268,7 +268,7 @@ public class ThreadPoolConfig {
 ```
 
 ## 2、远程调用时候的传递
-> 这个问题相对简单，直接配置一个`httpClient`拦截器，这样就会在每次发起远程请求时携带`tranceId`，如果你使用的是OpenFeign或者Dubbo等调用工具，请根据每个工具自行配置。
+> 这个问题相对简单，直接配置一个`httpClient`拦截器，这样就会在每次发起远程请求时携带`traceId`，如果你使用的是OpenFeign或者Dubbo等调用工具，请根据每个工具自行配置。
 
 ```java
 import icu.xuyijie.management.utils.log.MdcUtil;
