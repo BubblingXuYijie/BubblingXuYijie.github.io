@@ -114,7 +114,35 @@ public class LogTraceInterceptor implements HandlerInterceptor {
 
 ---
 
-# 三、查看追踪效果
+# 三、配置logBack
+> 请看xml里面的注释
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <!-- 日志输出格式，traceId就是代码里面定义的key键名traceId -->
+    <property name="log.pattern" value="%date{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%X{traceId}] %logger{36} - [%method,%line] - %msg%n"/>
+    <!-- 控制台输出 -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d [%thread] [%X{traceId}] %-5p [%c] [%F:%L] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 系统模块日志级别控制，下面的name改为你自己程序的包路径 -->
+    <logger name="icu.xuyijie" level="info"/>
+    
+    <!-- Spring日志级别控制 -->
+    <logger name="org.springframework" level="warn"/>
+    <root level="info">
+        <appender-ref ref="console"/>
+    </root>
+</configuration>
+```
+
+---
+
+# 四、查看追踪效果
 
 > 大家请看，下面的日志开头，多了一串`UUID`，这就是`traceId`，相同的代表是同一个请求的日志，不同代表是不同请求打印的日志。
 
@@ -123,7 +151,7 @@ public class LogTraceInterceptor implements HandlerInterceptor {
 
 ---
 
-# 四、要解决traceId传递问题
+# 五、要解决traceId传递问题
 
 ## 1、在不同线程之间的传递
 > 这个问题需要重写线程池，在线程池启动线程之前，为当前线程copy一份traceId，需要下面3个代码文件
