@@ -324,7 +324,7 @@ public class CustomClientHttpRequestInterceptor implements ClientHttpRequestInte
         } else {
             request.getHeaders().set(MdcUtil.TRACE_ID, MdcUtil.generateTraceId());
         }
-        return response;
+        return execution.execute(request, body);
     }
 }
 
