@@ -80,27 +80,6 @@ public class DouDiZhu {
         System.out.println("我的大小王：" + kingList);
         System.out.println();
 
-        //排序数字牌
-        for (int i = 0;i < paiNumberList.size();i++) {
-            int min = Integer.parseInt(paiNumberList.get(i).substring(1, 2));
-            if (paiNumberList.get(i).length() == 3) {
-                min = Integer.parseInt(paiNumberList.get(i).substring(1, 3));
-            }
-            for (int j = i + 1;j < paiNumberList.size();j++) {
-                int min2 = Integer.parseInt(paiNumberList.get(j).substring(1, 2));
-                if (paiNumberList.get(j).length() == 3) {
-                    min2 = Integer.parseInt(paiNumberList.get(j).substring(1, 3));
-                }
-                if (min > min2) {
-                    String a = paiNumberList.get(i);
-                    String b = paiNumberList.get(j);
-                    paiNumberList.set(i, b);
-                    paiNumberList.set(j, a);
-                    min = min2;
-                }
-            }
-        }
-
         //排序字母牌
         Queue<String> paiCharacterQueue = new ArrayDeque<>(paiCharacterList);
         paiCharacterList.clear();
@@ -123,6 +102,33 @@ public class DouDiZhu {
         paiCharacterList.addAll(QList);
         paiCharacterList.addAll(KList);
         paiCharacterList.addAll(AList);
+
+        //排序数字牌
+        for (int i = 0;i < paiNumberList.size();i++) {
+            int min = Integer.parseInt(paiNumberList.get(i).substring(1, 2));
+            if (paiNumberList.get(i).length() == 3) {
+                min = Integer.parseInt(paiNumberList.get(i).substring(1, 3));
+            }
+            //处理2的特殊情况
+            if (min == 2) {
+                paiCharacterList.add("2");
+                continue;
+            }
+            for (int j = i + 1;j < paiNumberList.size();j++) {
+                int min2 = Integer.parseInt(paiNumberList.get(j).substring(1, 2));
+                if (paiNumberList.get(j).length() == 3) {
+                    min2 = Integer.parseInt(paiNumberList.get(j).substring(1, 3));
+                }
+                if (min > min2 && min2 != 2) {
+                    String a = paiNumberList.get(i);
+                    String b = paiNumberList.get(j);
+                    paiNumberList.set(i, b);
+                    paiNumberList.set(j, a);
+                    min = min2;
+                }
+            }
+        }
+        paiNumberList.removeIf(item -> item.contains("2"));
         paiNumberList.addAll(paiCharacterList);
 
         //排序大小王
