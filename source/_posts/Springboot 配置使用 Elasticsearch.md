@@ -27,8 +27,7 @@ echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://arti
 # 更新仓库，安装
 sudo apt update
 sudo apt install elasticsearch
-# 开启外网访问，把这个文件里的 network.host 改为 0.0.0.0
-# elasticsearch版本 7.0、8.0 以上还需要修改 xpack-security.enable 为 false，如果不使用 ssl，也设置为 false，如下图
+# 需要修改成如下图，elasticsearch版本 7.0、8.0 以下可能没有我的截图里面的字段，不用管
 sudo vim /etc/elasticsearch/elasticsearch.yml
 # 启动服务
 sudo systemctl start elasticsearch.service
@@ -36,7 +35,7 @@ sudo systemctl start elasticsearch.service
 sudo systemctl enable elasticsearch.service
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/0a6849f927014a11814e0c54788f02ee.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fc354c7212b041d1bf56be7e8ac7c1e3.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/51bde4e4363d4163affa6d140ea7354b.png)
 
 不要忘记开放防火墙端口，控制台输入`curl -X GET "localhost:9200/"`或浏览器访问 `IP:9200`
 
