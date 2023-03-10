@@ -10,7 +10,7 @@ tags:
     - Hbase
     - Hive
     - Spark
-cover: https://img-blog.csdnimg.cn/20210429175805886.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop0.png
 ---
 # 安装版本
 Hadoop3.2.2、Hbase2.4.2、Hive3.1.2、MySQL8.0.24、Spark3.1.1、Scala2.13.5
@@ -21,31 +21,31 @@ Hadoop3.2.2、Hbase2.4.2、Hive3.1.2、MySQL8.0.24、Spark3.1.1、Scala2.13.5
 [Hbase2.4.2下载](https://www.apache.org/dyn/closer.lua/hbase/2.4.2/hbase-2.4.2-bin.tar.gz)
 
 [Hive3.1.2下载](https://mirrors.bfsu.edu.cn/apache/hive/hive-3.1.2/)选择bin.tar.gz
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202104081155548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop1.png)
 [Spark下载地址](https://spark.apache.org/downloads.html)记得第2栏选择Hadoop版本，本教程是3.2
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429112219860.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop2.png)
 [Scala2.13.5下载地址](https://www.scala-lang.org/download/) 进去官网后拉到最底部，选择第一个
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429121549278.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop3.png)
 
 
 [MySQL下载地址](https://dev.mysql.com/downloads/mysql/)
 
 这里一定要选择这个Linux Generic
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429122843924.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop4.png)
 下载前面这两个，64位和32位根据自己电脑情况来选
 
 
 # 开启Deepin或Ubuntu（我用的是虚拟机）
 我用的是Deepin20（Debian10 Buster库）好看吧， 还有“QQ2008”
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210408121049527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop5.png)
 #  安装Hadoop
 #### 1、安装和配置ssh
 首先在终端输入sudo apt-get update来更新一下apt的包列表（apt代表赋予管理员权限，建议每句命令都加上）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429113302761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop6.png)
 输入sudo apt-get install openssh-server回车，再输入sudo apt-get install openssh-client回车（Deepin可能已经预装了ssh，不过再输入一下确认一下也没什么）
 Ubuntu安装是如下界面
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429114200199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
-Deepin已经安装过是如下界面![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429114312826.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop7.png)
+Deepin已经安装过是如下界面![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop8.png)
 配置ssh无密码自动登录（很重要）
 
 ```powershell
@@ -65,7 +65,7 @@ $ ssh-keygen -t rsa
 ```
 
 输入完$ ssh-keygen -t rsa 语句后，需要连续敲击三次回车
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429124015239.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop9.png)
 
 ```powershell
 $ cat ./id_rsa.pub >> ./authorized_keys #加入授权
@@ -74,12 +74,12 @@ $ cat ./id_rsa.pub >> ./authorized_keys #加入授权
 ```powershell
 $ ssh localhost     #此时已不需密码即可登录localhost，并可见下图的Welcome
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429124202180.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop10.png)
 
 #### 2、安装和配置Java（一定要安装Java11版本之前的，不然Spark和Scala会报错，我们安装Java8）
 
 输入apt-cache search openjdk ,这是查看可以安装的Java版本有哪些，查询结果显示如下，我们可以看到，又openjdk-8-jdk
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429113512692.png)![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429113610735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop11.png)![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop47.png)
 接着，我们输入sudo apt-get install openjdk-8-jdk 回车，等待下载就安装成功了
 
 ```powershell
@@ -87,7 +87,7 @@ $ sudo apt-get install openjdk-8-jdk
 ```
 
 无论是Deepin还是Ubuntu，apt安装的Java都存在系统盘的usr/lib.jvm里
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429114517469.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop12.png)
 最后配置Java的环境变量
 
 我们在终端中输入vim ~/.bashrc ,会进入一个文档，也许会出现这个页面，按一下键盘上的E就能进入文档了
@@ -96,9 +96,9 @@ $ sudo apt-get install openjdk-8-jdk
 $ vim ~/.bashrc
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429114735983.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop13.png)
 进入文档后是这样的
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429114801213.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop14.png)
 我这边配置了本教程所有的环境变量，大家之间粘贴进去，后面就不用再配置了
 
 注意！！！vim的操作和普通文本编辑器不同！！！
@@ -117,14 +117,14 @@ export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$HBASE_HOME/bin:${JAVA_HOME
 ```
 
 然后输入source ~/.bashrc，这个意思是使配置的环境变量立即生效
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429121829247.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop15.png)
 检查Java版本，安装并配置成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429121905988.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop16.png)
 #### 3、安装Hadoop
 我们把下载好的Hadoop安装包放在“下载”文件夹里，Deepin下载的默认路径就是这个
 
 在这个目录下右键选择“在终端中打开”
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042912353982.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop17.png)
 在打开的终端中输入sudo tar -zxvf  hadoop-3.2.2.tar -C /usr/local
 
 将下载的Hadoop压缩包解压到usr/local/hadoop-3.2.2文件夹下，hadoop-3.2.2.tar.gz是下载的文件名
@@ -132,7 +132,7 @@ export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$HBASE_HOME/bin:${JAVA_HOME
 ```powershell
 sudo tar -zxvf  hadoop-3.2.2.tar.gz -C /usr/local
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429124820610.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop18.png)
 然后将hadoop-3.2.2重命名为hadoop，依次执行下列命令
 
 ```powershell
@@ -144,7 +144,7 @@ $ sudo mv ./hadoop-3.2.2 ./hadoop
 ```
 
 查看文件夹，已经命名为hadoop
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429124843584.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop19.png)
 你们的hadoop文件夹上肯定会带有一个黄色的锁🔒，还需要赋予hadoop文件夹权限，避免以后出现问题，接着执行下列命令，🔒就消失了，以后安装Hbase、Hive等，也是执行下列命令赋予权限，把文件夹名修改一下就行
 
 ```powershell
@@ -154,7 +154,7 @@ $ sudo chmod 777 -R hadoop
 伪分布需要配置三个文件
 
 1、/hadoop/etc/hadoop路径下的hadoop-env.sh，右键打开方式选文本编辑器，添加下面代码进去
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429125314387.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop20.png)
 
 
 ```bash
@@ -165,7 +165,7 @@ export HADOOP_SSH_OPTS="-p 22"
 export HADOOP_CLASSPATH=.:$CLASSPATH:$HADOOP_CLASSPATH:$HADOOP_HOME/bin
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429125128941.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop21.png)
 2、/hadoop/etc/hadoop路径下的core-site.xml，添加下面代码进去
 
 ```xml
@@ -237,19 +237,19 @@ export HADOOP_CLASSPATH=.:$CLASSPATH:$HADOOP_CLASSPATH:$HADOOP_HOME/bin
 Hadoop 的运行方式是由配置文件决定的，因此如果需要从伪分布式模式切换回非分布式模式，需要删除 core-site.xml 中的配置项。此外，伪分布式虽然只需要配置 fs.defaultFS 和 dfs.replication 就可以运行（参考官方教程），不过若没有配置 hadoop.tmp.dir 参数，则默认使用的临时目录为 /tmp/hadoo-hadoop，而这个目录在重启时有可能被系统清理掉，导致必须重新执行 format 才行。所以我们进行了设置，同时也指定 dfs.namenode.name.dir 和 dfs.datanode.data.dir，否则在接下来的步骤中可能会出错。
 
 配置完之后，执行根节点的格式化，在hadoop文件夹下右键，“在终端中打开”
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429130312784.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop22.png)
 
 输入bin/hdfs namenode -format
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429130341761.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop23.png)
 格式化根节点只在第一次配置完之后执行一次，切勿多次手动格式化，如果多次手动格式化导致DataNode或NameNode无法启动，请关闭Hadoop服务，删除hadoop文件夹下的这三个文件夹后，重新格式化根节点
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429130205627.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop24.png)
 ####  4、启动Hadoop
 我们已经配置好环境变量，所以可以在终端中直接输入start-dfs.sh来启动Hadoop的服务
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429162305453.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop25.png)
 注意！！！！今后启动不再使用start-dfs.sh命令，因为这个命令没有启动所有的Hadoop服务，以后做项目或者配置其他环境会报错，记住，以后启动Hadoop使用start-all.sh这个命令
 
 打开浏览器，输入localhost:9870（Hadoop3的默认端口）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429130931791.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop26.png)
 
 关闭Hadoop服务的命令是stop-dfs.sh
 
@@ -260,7 +260,7 @@ Hadoop 的运行方式是由配置文件决定的，因此如果需要从伪分�
 赋予权限
 
 本教程安装的所有的环境都解压在/usr/local里，后面不在赘述解压过程
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429161241878.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop27.png)
 #### 2、配置Hbase伪分布环境
 将下面代码复制到Hbase文件夹里的conf文件夹里的hbase-site.xml文件中
 
@@ -307,19 +307,19 @@ export HBASE_CLASSPATH=/usr/local/hbase/conf
 export HBASE_DISABLE_HADOOP_CLASSPATH_LOOKUP="true"
 ```
 然后就可以启动Hbase了，注意，启动Hbase之前先启动Hadoop，关闭Hbase的命令是stop-hbase.sh
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429162349764.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop27.png)
 可以localhost:60010访问Hbase页面
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429163339304.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop28.png)
 ####  3、hbase shell的基本操作
 输入hbase shell可以打开hbase shell
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429163432369.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop29.png)
 建个表
 查看表属性
 添加一个学生信息
 查看学生信息
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429163706357.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop30.png)
 退出shell输入exit回车
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429163824309.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop31.png)
 
 #  安装Hive
 ####  1、安装Hive
@@ -331,7 +331,7 @@ export HBASE_DISABLE_HADOOP_CLASSPATH_LOOKUP="true"
 $ sudo gedit hive-site.xml
 ```
 或者直接右键，新建文本文档，后缀修改为xml
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429170055550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop32.png)
 在hive-site.xml中这样写，此配置为MySQL8.0.24的配置，如果版本低于8，则不是这样配置
 
 ```xml
@@ -451,20 +451,20 @@ export HIVE_AUX_JARS_PATH=/usr/local/hive/lib
 ```
 #### 2、安装MySQL
 MySQL可以使用apt安装，Deepin默认的MySQL就是最新版，Ubuntu我不知道是不是，可以使用下面命令看一下版本
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429170546263.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop33.png)
 然后使用下面命令安装MySQL
 
 ```powershell
 sudo apt-get install mysql-server
 ```
 安装完成后查看MySQL版本
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042917093310.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop34.png)
 接下来还要安装一个mysql-connector-java
 [下载地址](https://dev.mysql.com/downloads/connector/j/)
 Deepin和UOS选Debian，Ubuntu选Ubuntu
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429171143796.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop35.png)
 下载完成后，文件是deb格式，直接双击点击安装就行了，我的因为安装过了，只有更新可以点
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429171429311.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop36.png)
 在终端输入以下命令启动MySQL服务
 
 ```powershell
@@ -476,13 +476,13 @@ sudo systemctl start mysql
 sudo mysql_secure_installation
 ```
 为MySQL设置密码（一定要设置，而且密码不能为空，不然后面报错）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429172112871.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop37.png)
 然后下面会让你输入很多Y/N，全部输入Y回车
 
 完成所有设置后，以root用户登录MySQL。 在终端中，键入以下命令：mysql -u root -p，输入 root用户的密码，然后按Enter ，登陆进MySQL
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042917231892.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop38.png)
 新建hive数据库，别忘了加分号
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429172510723.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop39.png)
 然后依次输入下面语句，意思是将所有数据库的所有表的所有权限赋给hive用户，后面的hive是配置hive-site.xml中配置的连接密码
 
 ```sql
@@ -498,15 +498,15 @@ flush privileges;  #刷新mysql系统权限关系表
 启动Hive之前，先运行start-all.sh启动Hadoop集群，然后输入hive启动
 
 如果输入hive以后出现下面报错
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429174017724.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop40.png)
 则输入hdfs dfsadmin -safemode leave关闭安全模式，再运行hive即可
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042917411333.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop41.png)
 启动成功，输入exitl;可退出hive shell
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429174138798.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop42.png)
 #  安装Spark
 ####  1、安装Scala语言支持
 解压不再赘述，请看安装Haoop板块介绍的方法，安装好查看版本
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042917465649.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop43.png)
 ####  2、安装Spark
 配置spark/conf文件夹下的spark-env.sh
 
@@ -530,17 +530,17 @@ export SPARK_EXECUTOR_MEMORY=1G
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$HADOOP_HOME/lib/native
 ```
 配置spark/conf文件夹下的worker，就在最后一行下面加上一个localhost即可（Spark基于hadoop3.2版本的配置文件从slaves变成了worker，旧版本为slaves）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429175201636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop44.png)
 ####  3、启动Spark
 启动Spark之前，同样要先保证Hadoop集群已经启动
 
 启动Spark使用start-master.sh和start-slaves.sh
 
 然后输入jps，查看，多出了Master和Worker
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429175519866.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop45.png)
 #### 4、开启Spark Shell
 spark shell的退出命令是 :quit
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429175805886.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop46.png)
 # 结语
 4.10：好了这篇文章到这就暂时结束了，Linux真sd，这系非人类，虽然早就配好了，但是等我心情好了再写吧
 4.29：心情不错，正在更新

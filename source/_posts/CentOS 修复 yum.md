@@ -29,7 +29,7 @@ rpm -Uvh --force http://mirror.centos.org/centos-7/7/os/x86_64/Packages/centos-r
 ```
 
 注意后面的 `http://mirror.centos.org/centos-7/7/os/x86_64/Packages/centos-release-7-9.2009.0.el7.centos.x86_64.rpm` 官方会删除旧版，只留下新版，所以先打开这个网址看看， 404 的话就访问这个网址`http://mirror.centos.org/centos-7/7/os/`，寻找`centos-release-7-9.2009.0.el7.centos.x86_64.rpm`这种样式的复制链接再运行命令。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/14883d3b6f704df2828f1c6c15162aff.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/CentOSDownload.png)
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
 #  三、重新生成缓存

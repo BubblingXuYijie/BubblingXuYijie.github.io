@@ -5,7 +5,7 @@ categories: Linux
 tags:
     - Linux
     - 宝塔面板
-cover: https://img-blog.csdnimg.cn/18b27bde7f7948e3b88757e128345338.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔面板截图.png
 ---
 # 前言
 
@@ -49,24 +49,24 @@ Fedora安装脚本 `wget -O install.sh http://download.bt.cn/install/install_6.0
 
 <font color=#999AAA >然后刚进去就提示你安装套件，强烈推荐！！！直接安装 LNMP 就行了，记得选 “编译安装”，差不多半小时，就可以了。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/57c44ab48d4347dabe0e015c06361be4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔0.png)
 
 <font color=#999AAA >一顿简单的操作，最终你的宝塔界面是这样的，点击左边 “网站”
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/18b27bde7f7948e3b88757e128345338.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔面板截图.png)
 
 <font color=#999AAA >根据我的标注操作，域名那里如果没有域名，就写自己的服务器IP，端口可以指定，但是不允许是8080，记得开放服务器防火墙，数据库可以选择创建或者以后再创建，提交
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b9181358d1f74b8b95afe39be67d12e3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔1.png
 
 <font color=#999AAA >我以前已经部署了两个了，两个网站写不同的端口就行了，点开网站根目录，初始有两张页面，我们可以把 index.html 和 404.html 删了，因为要放我们的 Vue 项目
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c7a37e29e2854ab1bea6eb9a532b72cd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8a79d158993e4254945458c2a8e53e5f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔2.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔3.png)
 
 
 <font color=#999AAA >直接把打包好的 dist 文件夹里面的东西，上传到这里就行了，然后就可以访问了，神奇吧
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1cdfdbb5a229467c820052125e869b2b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔4.png)
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
@@ -74,7 +74,7 @@ Fedora安装脚本 `wget -O install.sh http://download.bt.cn/install/install_6.0
 #  三、访问自己的网站
 
 <font color=#999AAA >浏览器输入自己配置的域名，我的是 175.24.228.202:8081  ，完成
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5a9dc81f3da6432e9e4453308e1e5d98.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔5.png)
 
 
 

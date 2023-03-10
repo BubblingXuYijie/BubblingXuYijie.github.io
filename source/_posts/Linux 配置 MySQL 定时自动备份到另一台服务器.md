@@ -25,14 +25,14 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MysqlLogo.jpg
 ssh-keygen -t rsa
 ```
 <font color=#999AAA >运行这句，一直敲击回车，会在 `/root/.ssh` 目录下生成两个文件，我使用的是 xftp 查看的文件，这个 .ssh 文件夹是`隐藏文件夹`，所以 xftp 下面看不到，你要手动输入地址 /root/.ssh 就可以进去了，把 `id_rsa.pub` 里的内容全选复制。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7cc7c8c05a2f44709b63d08ba532e302.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_12,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/888bb1f1266f4ea2b559b87ca95a93cc.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MySQL定时备份0.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MySQL定时备份1.png)
 
 
 <font color=#999AAA >来到目标服务器，也是进入 `/root/.ssh` 文件夹，把刚刚复制的内容粘贴进 `authorized_keys` 的尾部（authorized_keys 可能没有，自己新建，里面可以有多个 key，互不影响，换一行粘贴就行了）
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4ad1a3757b8f4d5a88710cccf5d7fac3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_19,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2dd8151717dc428891e391eb83a4c8c2.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MySQL定时备份2.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MySQL定时备份3.png)
 
 
 <font color=#999AAA >保存，这样我们两台服务器的 ssh 连接就建立好了。
@@ -50,10 +50,10 @@ cd mysqlAutoBackupTo24
 mkdir backup
 vim AutoBackup.sh
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c7a9227f880d422a84036059e2780ad4.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MySQL定时备份4.png)
 <font color=#999AAA >我建立的文件夹是这样的
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7fe3aba1924d4d3e88d4399145407839.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MySQL定时备份5.png)
 
 <font color=#999AAA >AutoBackup.sh 里面的内容
 
@@ -89,8 +89,8 @@ echo "===数据库备份到服务器成功==="
 
 下面我们运行一下这个 sh 看看效果，cd 到你的 sh 存放的文件夹 `sh AutoBackup.sh`，首次进行 ssh 连接要输入一个 `yes` 回车，然后去目标服务器 24 查看，sql 文件已经同步过去。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6ded890c67f94762a535dd6656502a8d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f0a03101fe4f4443a2a417a15a4b300e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_15,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MySQL定时备份6.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MySQL定时备份7.png)
 
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
@@ -116,7 +116,7 @@ crontab -e
 02 00 * * * sh /data/mysqlAutoBackupTo24/AutoBackup.sh
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a8db4aa12a004fe0989d811cfe2eed1f.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MySQL定时备份8.png)
 
 <font color=#999AAA >保险起见再刷新一下配置
 ```bash

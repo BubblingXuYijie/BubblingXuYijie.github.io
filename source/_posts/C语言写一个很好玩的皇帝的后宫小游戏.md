@@ -15,17 +15,17 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/CLogo.jpg
 2、选择“皇帝下旨选妃”或“翻牌宠妃”或“打入冷宫”或“单独召见爱妃去小树林做纯洁的事”
 
 **皇帝下旨选妃（如图）：因为妃子数量最多为5，所以提示“陛下注意身体呀！”，无法增加妃子**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629195420413.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/C后宫0.png)
 
 **翻牌宠妃（如图）：输入翻牌妃子“何光辉”，“何光辉”好感度上升10，其他妃子下降10**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200701122052769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/C后宫1.png)
 **单独召见爱妃去小树林做纯洁的事（如图）：
 选择和“金子亿”去小树林做纯洁的事情——就散散步，没有获得好感度**
 **选择和“孙茂珺”去小树林做纯洁的事——强行推到，由于我的粗鲁，孙茂珺对我的好感度下降20**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629201708657.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629200913645.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/C后宫2.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/C后宫3.png)
 **打入冷宫（如图）：选择把“杨洪利”打入冷宫，从妃子列表删除了“杨洪利”**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629195218900.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/C后宫4.png)
 ## 上源码
 
 ```c

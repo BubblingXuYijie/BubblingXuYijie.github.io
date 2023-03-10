@@ -86,10 +86,10 @@ vim config/kraft/server.properties
 
 > 修改前
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/46efd13483e146c3aea2f6c2a7197284.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianKafka0.png)
 > 修改后
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/05e817925fd74aceb1bb57d13dccb15c.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianKafka1.png)
 `修改完成保存`
 
 > 开放防火墙 9092 端口

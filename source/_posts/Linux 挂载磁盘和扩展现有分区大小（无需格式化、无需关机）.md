@@ -18,13 +18,13 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/LinuxLogo.jpg
 
 
 <font color=#999AAA >如果是虚拟机，先在虚拟机设置里面增加磁盘，点右边扩展，然后输入的最大磁盘大小，原本20G，输入40G，也就是扩容20G，完成后开启虚拟机，在系统里继续配置。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ef20b435877847f4bed96b17d1a53b36.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/挂载磁盘0.png)
 
 
 
 <font color=#999AAA >进入系统以后，输入`df -lh`查看现有分区挂载状态，再输入`fdisk -l`查看所拥有的的磁盘，我只有一个磁盘，就是 /dev/sda，现在是42.9G，可以看到磁盘容量已经增加了（之前是22G）
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0ccefacb2d1646529de85df3ad7b98ac.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_17,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/挂载磁盘1.png)
 
 <font color=#999AAA >如果我们要挂载这块磁盘到一个新的文件夹叫 /new，我们这样操作
 
@@ -34,7 +34,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/LinuxLogo.jpg
 
 ==提示：如果不想把这块磁盘的空间全部分区，就在“Last 扇区”那里，不要直接回车，输入数字修改大小再回车==
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/edbdf09c01114a35b2ab81d5f2ddae80.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_13,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/挂载磁盘2.png)
 
 <font color=#999AAA > 再次输入 `fdisk -l`你会发现下面比之前多了一个 sda4（你们的可能不叫sda4哈，反正就是多了一个），就是刚刚新建的分区
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/a22a92a8cb5140feb2414fb88bec5fd3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_11,color_FFFFFF,t_70,g_se,x_16)
@@ -49,7 +49,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/LinuxLogo.jpg
 
 <font color=#999AAA >运行 `vgdisplay`，显示卷组信息，查看VG Name，下面要用，这时 Free PE 为0
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1b2f3c85d70f4e30a3ded99790206726.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_12,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/挂载磁盘3.png)
 
 
 <font color=#999AAA >运行`partprobe - inform the os of partition table changes` 来使分区表生效（提示没有那个文件或目录不用管）
@@ -57,14 +57,14 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/LinuxLogo.jpg
 <font color=#999AAA >然后运行`pvcreate /dev/sda4` 将刚才的分区初始化为物理卷，以便被 LVM 使用
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ada8e4ebf0674e6cb4ff88692e62b6e3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_12,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/挂载磁盘4.png)
 
 
 <font color=#999AAA >运行`vgextend centos /dev/sda4`，  扩展卷组（上面的VG Name换成你自己的，我的叫centos，你们自己换一下）
 
 <font color=#999AAA >再次运行`vgdisplay`查看卷组信息，发现Free PE有空间了
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0424aea0602242dd9b439bcb39c183be.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_11,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/挂载磁盘5.png)
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
 
@@ -97,7 +97,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/LinuxLogo.jpg
 
 <font color=#999AAA >然后`df -lh`发现扩容成功
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6bce0e66a2dc4f4d9fa8afeb26e97e0f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_16,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/挂载磁盘6.png)
 
 
 

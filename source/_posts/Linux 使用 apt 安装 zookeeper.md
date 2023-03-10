@@ -85,7 +85,7 @@ JLine support is enabled
 ```
 
 > 上面我说 jdk 17 运行 zookeeper 有些小瑕疵，瑕疵就是：ls / 查看注册的服务节点时会报错，后面可能还会有其他命令报错，不过不影响正常使用，我已经用程序测试了，zookeeper 一切正常，只是zookeeper控制台命令有问题
-> ![在这里插入图片描述](https://img-blog.csdnimg.cn/aa388e0939c8470ba38eb016982b37a6.png)
+> ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/zookeeperInstall.png)
 
 
 

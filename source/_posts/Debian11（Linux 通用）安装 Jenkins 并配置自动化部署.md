@@ -10,7 +10,7 @@ tags:
     - Jenkins
     - 运维
     - 自动化
-cover: https://img-blog.csdnimg.cn/c2b2f110b7dc4f06a816afe49b3d9622.png
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins18.png
 ---
 # 前言
 > Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，可用于自动化各种任务，如构建，测试和部署软件。Jenkins可以通过 apt 和 yum 安装、Docker安装，也可以下载 war 包允许在拥有 JDK 环境的任何机器
@@ -117,23 +117,23 @@ firewall-cmd --reload
 
 > 浏览器访问服务器IP:8080
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1f872289ab2e43228b05ae3758c6d572.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins0.png)
 
 > 可以看到首次进入需要解锁，它说密码已经写入到我们的安装服务器，路径是 `/var/lib/jenkins/secrets/initialAdminPassword`，我们 `cat` 一下这个路径，得到密码，粘贴到网页，点击继续
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cf75372bf02442d6bc07ebfe67ad74c6.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins1.png)
 > 我们选择安装推荐的插件就行
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d0d94d95b92d4ad58a523e2a02c5f614.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins2.png)
 > 正在安装，等待安装完成
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d59b1a7edea646988f8cb95099058c74.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins3.png)
 > 创建用户
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ff0579645bbe4832b8a35bc1616d4939.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins4.png)
 > 就是控制面板的地址，保存继续就OK了！！！
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/29856b25e1eb484e8e2e289703acf39c.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins5.png)
 
 
 ---
@@ -162,13 +162,13 @@ OS name: "linux", version: "5.10.0-18-amd64", arch: "amd64", family: "unix"
 
 > 获取完成，开始配置，把 Install automatically 钩打掉就能配置本地环境了
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9be62dc5ed9243bdae52a23f55bd0531.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins6.png)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/db7e4865e0be4b55a1d6c2b29e7d46c1.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/533ba375c1c949c398daf7b146042fb4.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins7.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins8.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/15de9dfa01fc4555a78d495d7f915c1a.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins9.png)
 
 ---
 
@@ -176,56 +176,56 @@ OS name: "linux", version: "5.10.0-18-amd64", arch: "amd64", family: "unix"
 
 > 配置好环境保存，新建Item
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b09e02aa0085498a94973d1c02c63478.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins10.png)
 > 名字随便，然后选择`Freestyle project`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ea9e6344b87a49fd86408629836794ef.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins11.png)
 
 > 勾选为 Github项目，输入仓库地址
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3d16ef9047a34a299a2cc76dca26904a.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins12.png)
 > 配置项目的 Git 仓库连接，`Credentials`自己添加一个，填 github 的登录账号密码
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cb11f579c1174ebbbb457dadf0749ca7.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins13.png)
 
 > 构建触发器身份令牌随便填
 > 如下图：当前项目的回调地址为：`http://localhost:8080/me/my-views/view/all/job/test/build?token=test`
 只要执行这个地址（在浏览器上访问改地址），该项目就会发起一次构建项目，即拉取代码打包部署操作
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6657740438e44aceaa6205609f013404.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins14.png)
 > 配置构建命令：打包，cd 到 jar 包位置，启动，别问 BUILD_ID 是什么意思，我也不知道，就是这样写的
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/27da6ea21d104ac5aff5ebe683f876ac.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins15.png)
 
 ## 远程部署（可选）
 
 > 如果想打包到其他服务器启动，要安装新插件
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aeb4f6aa6d9c482ea09fa6a2b32fc283.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins16.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bc91da9a186248fc8ff284fb925d1744.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins17.png)
 > 页面左边还有一个 Download program，点进去，拉到最下面，打勾“完成后重启”
 > 如果没有，可以手动重启 `systemctl restart jenkins`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c2b2f110b7dc4f06a816afe49b3d9622.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins18.png)
 
 > 配置 `Send build over SSH` 因为我这里只有一台服务器，没有配置 ssh，我网上找了一张老图
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8a2f665abb0c47deb94b9cf0d8a7ce87.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins19.png)
 
 
 
 
 > 在GitHub服务器上的指定项目里面配置上文中提到的回调地址
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5001ad0c003b482e89b9c3ade0fe5a53.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins20.png)
 
 
 ---
 # 总结
 > 配置好以后，直接向配置的 Git 仓库分支推送代码，Jenkins会自动开始构建，这里可以看到构建历史
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4b3ef98df783499eac9c49cdb20b0dac.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Jenkins21.png)
 
 
 除了 Jenkins，还有一款免费的叫 JPom，也很不错，推荐一下，有兴趣的可以研究一下

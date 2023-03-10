@@ -28,7 +28,7 @@ curl -sSL https://get.daocloud.io/docker | sh
 
 <font color=#999AAA >等待安装完成后，运行`docker ps`，这样就算是安装好了
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/405117dca48d4b7e95a2ce8ec6924dd7.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/安装Docker0.png)
 <font color=#999AAA >启动服务
 
 ```bash
@@ -58,14 +58,14 @@ sudo systemctl enable docker
 }
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/78c610e33c7048129ea9320aea2f8f80.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_9,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/安装Docker1.png)
 
 <font color=#999AAA >然后重启一下 Docker ，命令行输入 `systemctl restart docker.service`
 
 
 <font color=#999AAA >然后命令行输入`docker info`，看我鼠标拉白的那个路径，我没有改，所以还是原来的路径
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ddf7e8ccb3ad4125a5f07a8726597e34.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_11,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/安装Docker2.png)
 
 
 
@@ -76,4 +76,4 @@ sudo systemctl enable docker
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
 # 总结
-<font color=#999AAA >
+<font color=#999AAA></font>

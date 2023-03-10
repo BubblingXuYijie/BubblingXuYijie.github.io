@@ -85,10 +85,10 @@ public class ReadFile {
 # 三、运行结果
 
 <font color=#999AAA >我新建了一个 test.txt ，里面写了 `1010嘻嘻嘻`，你们可以多建几个，可以批量读取替换的
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f514471595fb41febaacdd3dad213792.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JavaFile0.png)
 <font color=#999AAA >运行项目，发现 `1010` 被替换为了 `哈哈哈`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/988f5be721cb4a3ca21ddb4881ee5f70.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JavaFile1.png)
 
 
 

@@ -963,7 +963,7 @@ Enjoy it!
 下载小飞机，手机版小飞机为例
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d2a3e9b457224d09a535a6e889b54ff0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/ShadoSocksConfig.png)
 
 
 

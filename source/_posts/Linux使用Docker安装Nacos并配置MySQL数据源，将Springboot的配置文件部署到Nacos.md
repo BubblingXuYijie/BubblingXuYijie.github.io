@@ -100,10 +100,10 @@ sudo ufw reload
 
 
 <font color=#999AAA >进入 MySQL 容器，创建 nacos 数据库，切换到创建的 nacos 数据库，基本操作代码自己敲
-![在这里插入图片描述](https://img-blog.csdnimg.cn/54f4dc6d37a4405eaec7530abc9e1f3d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_13,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DockerNacos0.png)
 
 <font color=#999AAA >==然后！！！把下面的 SQL 文件全都复制到 mysql> 后面，然后等它运行完，运行完以后看看是不是最后一句话没有运行，我的最后一句就没有运行，再敲一下回车就 OK==
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1e5aaa4d623944d18d45db2d9ca753fe.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DockerNacos1.png)
 
 
 ```sql
@@ -455,19 +455,19 @@ docker restart nacos
 
 ##  登录 nacos
 <font color=#999AAA >如果你的 Linux 服务器没有界面，就在一台 Windows 电脑上登录，因为上面防火墙已经开放端口，浏览器地址栏输入 IP:8848/nacos 就可以了。默认账号密码都是 nacos
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ce58b52eb55a4b9da6aba8c50d0c2a81.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DockerNacos2.png)
 <font color=#999AAA >然后按照我下面的标记，创建新的 命名空间 ，默认的命名空间是 public，不建议用，最好一个项目一个命名空间。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/debf3f5f121b4b488aad297ad712aeb0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DockerNacos3.png)
 
 <font color=#999AAA >回到我们的配置列表，点击刚刚创建的命名空间
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/077b8535812f4c4cb5f0ff4f46977dcf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DockerNacos4.png)
 <font color=#999AAA >点击右边蓝色 + 号，创建一个 yaml，这个 Data Id 建议都是这个格式，如果项目有多个配置文件，就 application-xx.yaml ，默认就起这个名字 application.yaml
 
 <font color=#999AAA >Group 的话默认是这个，建议改一下，不改的话可能会出问题，只是可能，我就先不改了，然后下面类型选择 yaml，把你的 springboot 项目配置文件全都粘贴到下面的框里。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/391e697f19e44a858a32635399ca6ed2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DockerNacos5.png)
 
 <font color=#999AAA >Nacos 的安装和配置就完成了，下面我们开始把 Springboot 的配置文件放到 nacos 并使用
 
@@ -507,7 +507,7 @@ compile group: 'com.alibaba.nacos', name: 'nacos-client', version: '1.4.1'
 ## 2.配置 nacos 的yaml
 
 <font color=#999AAA >在 resources 下面新建 bootstrap.properties ，yml 也行
-![在这里插入图片描述](https://img-blog.csdnimg.cn/96b61afa70a14b4cb94d094346d2131e.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DockerNacos6.png)
 
 <font color=#999AAA >里面这样写
 

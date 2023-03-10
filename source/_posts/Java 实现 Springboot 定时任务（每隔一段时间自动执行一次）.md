@@ -21,14 +21,14 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/javaLogo.png
 
 
 选择Spring Initializr进行创建
-![在这里插入图片描述](https://img-blog.csdnimg.cn/503219d5137446ea862d042ef63a820b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_19,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/定时任务0.png)
 
 
 # 二、示例代码
 
 
 我们像往常的写法一样，把Springboot的结构随便写一写。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/18bf66e27f7f43889aa2d74d73a92315.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_7,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/定时任务1.png)
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
@@ -148,7 +148,7 @@ public class DemoApplication {
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d47e056ff1f94ce6b0faf9e24500f4af.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_14,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/定时任务2.png)
 
 
 # 总结

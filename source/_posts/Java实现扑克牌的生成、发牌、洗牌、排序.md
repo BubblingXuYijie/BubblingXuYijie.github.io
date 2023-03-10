@@ -147,6 +147,6 @@ public class DouDiZhu {
 ```
 
 ## 输出结果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/50de9b064ab34cd89822ed165b9934eb.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/洗牌.png)
 
 > 不太喜欢研究算法，用的是都能看懂的笨办法，如果有大佬有更棒的排序方案，一定要叫我去观摩！

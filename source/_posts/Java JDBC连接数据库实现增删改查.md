@@ -18,10 +18,10 @@ JDBC代表Java数据库连接。JDBC库中所包含的API通常与数据库使�
 - 普通Java项目，在lib中粘贴此包（在官网上下），版本无所谓
 
 [官网下载](https://downloads.mysql.com/archives/c-j/)  系统选择platform那个
-![在这里插入图片描述](https://img-blog.csdnimg.cn/edbdee0ddc6a48e9b93d4a58cd7841be.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JDBC0.png)
 
 jar包存放位置，项目根目录下的lib文件夹
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629114646289.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JDBC1.png)
 - 如果是Maven或者Gradle或者Spring项目。不需要引入上面的jar包，直接在依赖里面写（Maven为例）
 
 
@@ -73,7 +73,7 @@ public class Find {
     }
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629115853157.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JDBC2.png)
 ## 实现数据库的删除
 新建Delete类
 ```java
@@ -100,8 +100,8 @@ public class Delete {
 }
 ```
 运行后在数据库中刷新表以后，发现id为“2”的用户被删除
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629121801799.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629121810796.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JDBC3.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JDBC4.png)
 ## 实现数据库的增添
 新建Add类，在SQL语句中输入要增加的信息
 ```java
@@ -128,7 +128,7 @@ public class Add {
 }
 ```
 运行打开数据库刷新，发现数据增加成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629122833585.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JDBC5.png)
 ## 实现数据库数据的修改
 新建Update类
 ```java
@@ -156,12 +156,12 @@ public class Update {
 ```
 
 刷新数据库后可见数据修改成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020062912290411.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JDBC6.png)
 
 <hr>
 
 #  三（扩展）、整合增删改查的代码，封装为一个工具类
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629131535142.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JDBC7.png)
 ## 在util包下新建DBUtil类
 将JDBC的基本步骤的1、2、7步放入DBUtil类中，代码中使用了try...catch，也可以直接idea自动生成抛出异常
 

@@ -28,7 +28,7 @@ sudo fc-cache
 fc-match Times
 ```
 大功告成
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b24596b2bceb489a931a2d09ac0304a0.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Debian安装字体0.png)
 然后一定要重启报错的项目
 
 
