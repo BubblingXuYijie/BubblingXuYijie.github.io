@@ -5,7 +5,7 @@ categories: Java
 tags:
     - SpringBoot
     - Swagger
-cover: https://img-blog.csdnimg.cn/abdd69f2cabe4c1fbb42583d680a83e5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Swagger0.png
 ---
 # 前言
 
@@ -174,6 +174,6 @@ public class Blog implements Serializable {
 # 总结
 启动项目，访问`http://localhost:8081/swagger-ui/`，注意 Swagger3 和 2 访问的页面有细微差别
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/abdd69f2cabe4c1fbb42583d680a83e5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Swagger0.png)
 
 

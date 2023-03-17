@@ -44,14 +44,14 @@ compile group: 'com.github.lianjiatech', name: 'retrofit-spring-boot-starter', v
 @RetrofitScan("com.example.retrofitdemo.retrofitinterface")
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4e6ccdb61e644743a0d4de93f7c6425c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_17,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Retrofit0.png)
 
 
 ## 2.项目解析
 ###  结构
 <font color=#999AAA >entity、controller 和 service 都是普通的 entity、controller和service，`retrofit` 要创建的东西只有 `interceptor` 和 `retrofitInterceptor`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f774617c487d4bee8325b013d5b2af71.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Retrofit1.png)
 
 ###  各种请求方法的书写方式
 <font color=#999AAA >retrofit 的请求方法有很多，除了普通请求，还支持 Restful 风格，我在 RetrofitTest 里面几乎把所有请求方式的demo都写了，并且有详细的注释

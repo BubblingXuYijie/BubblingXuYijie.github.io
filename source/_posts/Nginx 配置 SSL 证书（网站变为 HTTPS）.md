@@ -22,8 +22,8 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/NginxLogo.png
 
 <font color=#999AAA >把ssl证书的pem和key传到服务器的nginx的根目录的cert（这个文件夹自己创建，可以不叫这个名字），这两文件 pem 和 key 传上来就可以了。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9b7048dacf34491991e26f90fa61c9d8.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7dc38fee577a43ca9dce17c4dd4e8c93.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Nginx0.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Nginx1.png)
 
 # 二、修改 nginx.conf
 

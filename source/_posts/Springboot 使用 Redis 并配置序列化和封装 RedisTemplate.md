@@ -10,13 +10,13 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Redis.jpg
 ---
 # 前言
 >为什么要配置序列化：如果不配置序列化的话，我们在redis数据库中存储的数据可能以乱码形式显示出来，不方便我们判断数据存储的正确性，说白了就是序列化以后存进去的是什么，查询出来的就是什么，否则我们的键值都会变成一串看不懂的乱码。
->![在这里插入图片描述](https://img-blog.csdnimg.cn/f019f9f1393a410593faff8681882f5a.png)
+>![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/RedisSerilize0.png)
 
 
 
 
 >为什么要封装RedisTemplate，因为如果不进行封装的话，大家请看，是不是有黄色的警告信息，看着起来很不舒服，RedisTemplate后面的尖括号可以填泛型，填写以后警告就消失了，但我们的类型很多，每次只能Autowired一个RedisTemplate，所以不能写尖括号内的类型，同时封装也能按照自己的习惯自定义方法，更好用。
->![在这里插入图片描述](https://img-blog.csdnimg.cn/5bbee598805d444a9743703a928edb84.png)
+>![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/RedisSerilize1.png)
 
 
 
@@ -134,12 +134,9 @@ public class RedisConfig {
 # 四、封装RedisTemplate
 
 `注意，我这里用的是 Java17 新增的 record 纪录类，如果你们是低版本的 JDK ，把 record 更换成 class ，然后注入RedisTemplate`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/292e8f4b21d0414886f353c638bff477.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/RedisSerilize2.png)
 
-
-
-```java
-package pers.xuyijie.communityinteractionsystem.utils;
+https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/RedisSerilize0.png;
 
 import org.springframework.data.redis.core.*;
 import org.springframework.stereotype.Component;
@@ -877,17 +874,17 @@ public class TestController {
 # 六、操作演示
 
 `我们先来演示一下第二个方法，直接浏览器请求，可以看到，存入并查询出了我们存入的数据`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/65e7183b79ba4f0b90994fb56ea16dfa.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/RedisSerilize3.png)
 `redis控制台也能查询出来`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/649b68f5d5d0476d99f59958559b91a9.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/RedisSerilize4.png)
 > 为什么先演示第二个方法呢，因为要用第一个向你们展示一个“小错误”，我们输入中文来测试一下
-> ![在这里插入图片描述](https://img-blog.csdnimg.cn/5347d5365be04a2992f55b333b261615.png)
+> ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/RedisSerilize5.png)
 > 很棒，成功存入并正确读取出来了对不对
 >  <b>
 >  那我们去控制台看一看，注意看，我们的键还是“key”，没有乱码，value的前半部分中文乱码，后面的String是正常显示的，说明这不是序列化的问题
->  ![在这里插入图片描述](https://img-blog.csdnimg.cn/87fca7083f4f410f958abc2643b41c51.png)
+>  ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/RedisSerilize6.png)
 >  解决方案是，使用 redis-cli --raw 进入控制台，flushall 先清空数据，再次请求接口存储数据，查询出来的中文就出来了，但是我们还是看不懂，这和代码和redis没有关系
->  ![在这里插入图片描述](https://img-blog.csdnimg.cn/761875bad2e14440b1dc3f7a290bbfc7.png)
+>  ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/RedisSerilize7.png)
 >   原因是电脑的 cmd 字符默认是 GBK，你们bing一下，看看怎么把cmd改为 UTF-8，好像要从注册表里面改，改好就可以正确显示了
 
 `其实代码可以正确读取出来就说明一切正常的了，我们控制台看到乱码不必理会，这里只是提一下`

@@ -5,7 +5,7 @@ categories: Java
 tags:
     - Maven
     - Spring
-cover: https://img-blog.csdnimg.cn/20200702145135871.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven0.png
 ---
 # 项目开始，先上源码下载，点击下载
 
@@ -20,24 +20,24 @@ cover: https://img-blog.csdnimg.cn/20200702145135871.png?x-oss-process=image/wat
 ## 安装MySQL
 [MySQL安装地址](https://dev.mysql.com/downloads/windows/installer/8.0.html)
 官网打开有点慢的，选择这个下载安装，傻瓜式一键到底
-![在这里插入图片描述](https://img-blog.csdnimg.cn/22b5cd8b848c47d6955e63ea78f669ae.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven1.png)
 
 
 
 ## 建立数据库
 
 使用Navcat或SQLyog建立创建一个数据库：wzsxy，在这个数据库上创建一张表：tb_user，并输入几条起始数据
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200707093411830.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200707093425692.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200707093436413.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven2.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven3.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven4.png)
 
 ## 使用idea快速生成一个Maven工程
 选择新建项目，左边的“Maven”，勾选“Create from archetype”，选择下方目录的maven-archetype-webapp，然后next
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200702133936726.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven5.png)
 到了这一步，如果没有安装和配置过Maven，就选用idea自带的“Bundled(Maven 3)”，你们的和我可能不太一样，下面的两行是我自己配置的Maven设置和仓库位置，你们的选择“Bundled(Maven 3)”其他保持默认即可
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200702134507197.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven6.png)
 初始的项目目录
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200702134624824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven7.png)
 我们最终搭建好的项目目录，大家可以先把目录建立好
 解释一下bean包、dao包
 1、bean 实体层 实体类 --> 属性，构造，方法
@@ -45,7 +45,7 @@ cover: https://img-blog.csdnimg.cn/20200702145135871.png?x-oss-process=image/wat
 3、dao 持久层 --> 数据库的操作
 4、service层：业务层 控制业务
 fliter则是对未登录的网页进行拦截的操作
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200707091404769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven8.png)
 webapp下面就是我们的网页，也就是要展示和操作数据的地方，我已经配置好了网页(包含SQL代码)，源码资源里面有，在文章开头，可以无需积分下载。
 
 
@@ -269,7 +269,7 @@ webapp下面就是我们的网页，也就是要展示和操作数据的地方�
 ```
 
 粘贴到pom文件中，然后点击pom页面右上方的刷新图标，等待所需jar包的下载，需要数分钟
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200702135117312.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven9.png)
 
 ## 配置resouces
 ### 配置db.properties
@@ -930,23 +930,23 @@ public class LoginFilter implements Filter {
 ## 配置Tomcat
 [Tomcat下载地址](https://tomcat.apache.org/download-90.cgi)
 选择Core里面的最后一个下载安装
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200702143916832.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven10.png)
 在idea右上角点击“Add Configuration”
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200702144011299.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven11.png)
 在左上角“加号”里面选择Tomcat Service下的Local
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200702144055526.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven12.png)
 然后点右边“+”“Artifact”添加一个maven:war即可
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200702144441946.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven13.png)
 # 项目展示
 保持MySQL和数据库的连接状态
 运行程序
 等待运行完成
 在浏览器地址栏中输入 localhost:8080/  回车
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020070214322712.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven14.png)
 即可进入我们的登录页面，输入数据库里面的任意一个username和password
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020070214495266.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven15.png)
 页面会显示我们数据库里的数据，并可以在页面上直接进行添加修改和删除
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200702145135871.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Maven0.png)
 
 #  再放一次源码，以免你们没看到
 

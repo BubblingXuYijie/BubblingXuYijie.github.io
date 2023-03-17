@@ -20,7 +20,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaTokenLogo.jpg
 # 一、引入和配置
 先给你们看一下 Demo 文件结构
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/da2fc49f138a4968a6fa6f1d6e7798d9.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken0.png)
 
 
 ## 1.引入依赖
@@ -34,9 +34,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaTokenLogo.jpg
     <version>1.31.0</version>
 </dependency>
 ```
-
-> 如果需要将 token 存入 redis，则还需要引入下面的依赖（一般搭建单点登录服务器才需要使用 redis）
-
+https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken.png
 `使用redis ，无需任何其他配置，只需要多引入下面几个依赖，然后下面的 yml 加一些配置，satoken 就可以自动存储到 redis，非常方便`
 
 ```xml
@@ -520,7 +518,7 @@ public class TestController {
 # 二、登录演示
 `到这里，我么前期的配置就已经结束了，下面我开始测试每一个方法，为大家展示运行结果并解析代码，先把项目运行起来`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e76170e24e6c4e42b31086c7afdb0480.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken1.png)
 
 
 ## 1、登录-doLogin
@@ -531,39 +529,39 @@ public class TestController {
 SaBasicUtil.check("sa:123456");
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dc97a725158b452aa9f9ba5c4a76cb16.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken2.png)
 > 进行 `Basic认证` 后，登陆成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3fc2ac5572a348f1bab2f068879fe5a9.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken3.png)
 
 `我这里使用了 redis ，token 已经存储进来了`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5060b4810cd348a09ea73e1eb7410b20.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken4.png)
 
 
 ---
 
 ## 2、验证登录-isLogin
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b6b9cb9ddd0747e3bfa1e49d58df19e7.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken5.png)
 
 ---
 
 ## 3、获取token时效-getTokenTimeout
 > 这是我们在 yml 里面配置的时效性，30天的毫秒
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ffc87c8d8a164ead92e8380a77c200c2.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken6.png)
 
 ---
 
 ## 4、加密
 > 请求 `encodePassword` 接口
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0537dab8801c4133841b05c36e13acc5.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken7.png)
 
 ---
 
 
 ## 5、注销登录-logout
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6fdd6923346342e490075ca757151298.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken8.png)
 
 ---
 
@@ -579,24 +577,24 @@ SaBasicUtil.check("sa:123456");
 ## 1、登录认证
 > 下面我们调用添加了 `@SaCheckLogin` 注解的方法
 ### (1) 未登录情况
-![在这里插入图片描述](https://img-blog.csdnimg.cn/32b3a5c2545643e6a58d5facc6f16d97.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken9.png)
 ### (2) 已登陆情况
 
 > 可以看到调用成功，控制台打印出我们上面拦截器配置的输出信息
 >
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ad17714448e34d408af24b2fb4550eb3.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken10.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/967ba4056be749f4b3ec707eed0641c3.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken11.png)
 
 ---
 
 ## 2、权限认证
 > 登录后，我们调用增加了 `@SaCheckPermission(value = "del")` 注解的方法，可以看到提示`无此权限：del`，因为前面我们模拟用户权限时，没有给用户分配 `del` 权限
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/86aaf82cafc14130be209cd4da0b80c5.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken12.png)
 > 我们再调用增加了 `@SaCheckRole("super-admin")` 注解的方法，可以看到成功
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/85c641e9ee53498caa548115295e53a0.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SaToken13.png)
 
 ---
 

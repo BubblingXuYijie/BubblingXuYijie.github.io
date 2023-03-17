@@ -146,7 +146,7 @@ public class LogTraceInterceptor implements HandlerInterceptor {
 
 > 大家请看，下面的日志开头，多了一串`UUID`，这就是`traceId`，相同的代表是同一个请求的日志，不同代表是不同请求打印的日志。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/55f7e8da8e114868befde21318776851.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MDC0.png)
 
 
 ---

@@ -34,4 +34,4 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/HtmlCssLogo.jpg
 ```
 ## 实现效果
 实际动画很流畅，下图为录制的GIF帧率较低
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020062919262875.gif)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/CSS霓虹灯.gif)

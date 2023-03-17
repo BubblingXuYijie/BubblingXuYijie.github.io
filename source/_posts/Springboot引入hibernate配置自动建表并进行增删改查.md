@@ -159,15 +159,15 @@ public class Test {
 
 # 四、测试结果
 ## 1、表已建好
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c285a6b368364f4b86cab8a12f480932.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/hibernate0.png)
 ## 2、请求接口，打印SQL，插入和查询数据
 使用浏览器调用接口
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5bf89c248d4e40bea3a2cc7014bdeb91.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/hibernate1.png)
 控制台打印出SQL语句，查询出我们刚刚插入的一条数据，主键为自动生成的UUID
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ed7b48cdd41c4c71ad599732d4ffcf53.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/baf77bb06cd1406aa195097531c1cf9c.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/hibernate2.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/hibernate3.png)
 
 
 

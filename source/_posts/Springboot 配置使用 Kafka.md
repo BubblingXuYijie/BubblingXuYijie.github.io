@@ -24,7 +24,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Kafka.jpg
 
 > 多模块项目构建，这里不讲，如果你不会，就新建两个普通的web项目 `KafkaConsumer`和 `KafkaProvider`就行
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6eaef6293f32469fbe32ff95377e45a6.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootKafka0.png)
 
 
 ---
@@ -570,13 +570,13 @@ public class MyKafkaListenerErrorHandler implements KafkaListenerErrorHandler {
 # 七、开始测试
 > 启动生产者和消费者，消费者控制台打印出我配置的 group-id `webGroup` id就是启动成功了，`如果启动报错不会解决，可以评论区留言`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/241aa02ea6d541f2b7952de143cce854.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootKafka1.png)
 ## 测试普通单条消息
 
 > 浏览器访问 `http://127.0.0.1:8081/provider/send` 来调用生产者发送一条消息，生产者控制台打印出回调，消费者控制台输出接收到的消息
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2446b55a7d034907be029c9062409d09.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0a7e2d17974e444087b58698d490c18d.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootKafka2.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootKafka3.png)
 
 ## 测试消费者异常处理
 > 把消费者里的 `listen1` 方法里的这行代码取消注释
@@ -587,7 +587,7 @@ int i = 1 / 0;
 ```
 > 重启消费者，访问 `http://127.0.0.1:8081/provider/send` ，发现消费者虽然报错但是没有抛出异常，而是被我们处理了
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20844679c6a64ea5875b2fbcee435cf2.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootKafka4.png)
 
 
 
@@ -625,7 +625,7 @@ public void listen1(List<ConsumerRecord<Object, Objects>> consumerRecord, Acknow
 > 注意！！！Debug消费者，因为我们要打断点观察每次接收的条数
 > 调用消费者接口`http://127.0.0.1:8081/provider/sendMultiple`批量发送10条，可以看到消费者每次只接收3条
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/de12a490c6e5430c8bd8fa108e3380da.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootKafka5.png)
 
 ## 测试手动控制消费者监听
 > `@KafkaListener`这样写，id 和 autoStartup 是关键

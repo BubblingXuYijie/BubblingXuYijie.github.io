@@ -29,8 +29,8 @@ Pega的BPM学习笔记
 [Pega-Github地址](https://github.com/XuYijie000416/Pega)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a2aa89d3ea9d4bfdbcc2f488a93299e3.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Pega0.png)
 #  项目实例
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2ddb79a5946b43b38aa53bc1ec4a0fc5.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Pega1.png)
 

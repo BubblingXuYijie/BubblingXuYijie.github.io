@@ -26,12 +26,12 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Dubbo.jpg
 
 > 最基础的结构，构建方法是，先 new 一个 DubboDemo 的 Springboot 项目，不需要勾选任何依赖
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0e48521c5baf411d821d798051ffdf4b.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DubboZk0.png)
 > 然后右键 DubboDemo ，new 一个 module，也选择 Springboot 项目，勾选一个 web 依赖即可，把 api 、zookeeperConsumer、zookeeperProvider都 new 出来
 >
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dcb63b1ada04451ca977fccf286a2c38.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2b76e66eb101402fa1c8d924bdcdcc9b.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/520b26889ba34339be17b1b4f739bd01.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DubboZk1.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DubboZk2.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DubboZk3.png)
 ## 2、修改父POM
 
 > 也就是把 DubboDemo 的 POM的 dependency 全部删掉，添加`<packaging>pom</packaging>`和`<modules></modules>`
@@ -102,12 +102,12 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Dubbo.jpg
 
 > 这个模块什么都不用改，直接新建一个 Service 里面写个方法就行了
 >
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a21b0c71bd5a447e80849aacfb732e23.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DubboZk4.png)
 
 ## 3、zookeeperProvider 模块
 > 在 pom 里添加一下对 api 模块的依赖，这样我们就可以注入 api 模块里的 service 了，zookeeperConsumer 的 pom 也要引入 api 模块
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b9174f34f379419b93a040f5bfddd811.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DubboZk5.png)
 > 修改 yml 配置文件
 
 ```yaml
@@ -136,20 +136,20 @@ dubbo:
 
 > 写 ServiceImpl ，实现方法，看见没有，我们引入的 api 模块，可以直接注入到我们的 provider 模块中，记得要用 `@DubboService` 替换@Service注解，这个注解代表我们的这个 impl 是一个远程服务提供者
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/649ff9e7e0fe4c74a10abc62efda8ec1.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DubboZk6.png)
 > 启动类增加`@EnableDubbo`注解
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3d8cef27d8ff4f758d404c67d34484f8.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DubboZk7.png)
 
 ## 4、zookeeperConsumer 模块
 
 > 引入 api 模块依赖，启动类增加`@EnableDubbo`注解，然后 yml 配置文件和 provider 一样，就是需要改个 application-name，和 provider 的不一样就可以了
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/052fe45bbb5147408b267ebbbcc2377e.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DubboZk8.png)
 
 > 然后代码只需要写一个 controller 就行了，注入 api 模块的 Service，用`@DubboReference`注解，这个注解代表这个 service 是一个远程服务，需要使用 dubbo 的 RPC 进行调用
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6c15a7a755d842e49348fd0452f4f3ad.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DubboZk9.png)
 
 
 
@@ -161,14 +161,14 @@ dubbo:
 # 三、开始测试
 > 启动 zookeeperProvider 和 zookeeperConsumer 两个模块
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/16f0505bec1a43f381474a02d8b17054.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DubboZk10.png)
 > 浏览器请求我们的 zookeeperConsumer 的 controller
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fd1e4175b6ff4b39bfd5fa597e342d9d.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DubboZk11.png)
 
 > 发现在 zookeeperProvider 的控制台中打印了下面的文字，说明远程调用成功
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0b40e7c508814e6c9b2eeae067a32b1e.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DubboZk12.png)
 
 
 

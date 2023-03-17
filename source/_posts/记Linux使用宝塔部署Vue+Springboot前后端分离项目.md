@@ -6,7 +6,7 @@ tags:
     - Linux
     - SpringBoot
     - 宝塔面板
-cover: https://img-blog.csdnimg.cn/e35c42596c58477db98839a40eb57e1c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔部署0.png
 ---
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
@@ -47,16 +47,16 @@ cover: https://img-blog.csdnimg.cn/e35c42596c58477db98839a40eb57e1c.png?x-oss-pr
 
 <font color=#999AAA >首先在宝塔上新建站点和数据库，域名那里如果没有域名，就写自己的服务器IP，端口可以指定，但是不允许是8080，记得开放服务器和宝塔防火墙（==服务器和宝塔各有防火墙，都要开放，自己设置的网站端口要开放，数据库的3306要开放，根据需要）==，数据库可以选择创建或者以后再创建，提交
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e8d3592299064917beb6aa8131b953af.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔部署1.png)
 
 <font color=#999AAA >我以前创建好了点开网站根目录，初始有两张页面，我们可以把 index.html 和 404.html 删了，因为要放我们的 Vue 项目
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8a79d158993e4254945458c2a8e53e5f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔部署2.png)
 
 
 <font color=#999AAA >直接把打包好的 dist 文件夹里面的东西，上传到这里就行了，里面的 ==java_back==文件夹是我自己创建的，里面放了 Springboot 打的包，后端项目放哪里其实无所谓，你们自己看着办
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/58e1aa4dce68489eb76a4670121c69c8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔部署3.png)
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
@@ -68,16 +68,16 @@ cover: https://img-blog.csdnimg.cn/e35c42596c58477db98839a40eb57e1c.png?x-oss-pr
 [启动脚本和配置文件下载](https://download.csdn.net/download/qq_48922459/55643280)
 <font color=#999AAA >下载完成后把解压出来的文件夹里的文件拖到服务器jar包所在的文件夹
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9f7429df33c648cab0284de905c0d34c.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔部署4.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f2b8aecf2eb44ae1b1e40114e42fc5c2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔部署5.png)
 
 <font color=#999AAA >建议用 **XShell** 连接你的数据库，`cd` 到 jar 包位置，输入 `ls` 查看文件，然后输入 `sh build.sh` 来运行这个文件，会显示构建成功，这时会发现多了一个autoScript文件夹，`cd autoScript`，里面有几个sh文件，`sh startup.sh` ，项目就会启动了，并且永远不会停止，除非你运行 `sh shutdown.sh`。OK，完成。放心的退出你的服务器吧。
 
 
 如果 XShell 还有连接数据库、命令什么的不会，我的另一篇很详细，看我的传送门 [Java非Web的Springboot项目打包部署到Linux服务器并运行（Maven、Gradle）](https://editor.csdn.net/md/?articleId=121718064)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e35c42596c58477db98839a40eb57e1c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔部署0.png)
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
 
@@ -90,7 +90,7 @@ cover: https://img-blog.csdnimg.cn/e35c42596c58477db98839a40eb57e1c.png?x-oss-pr
 
 <font color=#999AAA >站点设置里的配置文件，添加我鼠标选中的东西，里面的 IP 和端口填你自己的服务器 IP 和后端设置的端口，==/api/== 是你 Vue 里面自己配置的 axios 的 baseURL 的转发地址，如果没有配置，把 ==/api/== 换成  /  就行了
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c28ceddecc3a4fe18584124f447b8380.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔部署6.png)
 ```bash
 	location /api/ {
       proxy_pass http://111.111.11.111:8081/;
@@ -128,7 +128,7 @@ cover: https://img-blog.csdnimg.cn/e35c42596c58477db98839a40eb57e1c.png?x-oss-pr
 		root /www/wwwroot/xuyijie.icu/upload_file/user_head/;     #指定图片存放路径    
 	}
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/130a297a3d484cd29066caa8b1a2a6fc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔部署7.png)
 
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
@@ -136,7 +136,7 @@ cover: https://img-blog.csdnimg.cn/e35c42596c58477db98839a40eb57e1c.png?x-oss-pr
 ##  2、Springboot配置物理地址映射
 
 <font color=#999AAA >新建 config 包，在里面新建 WebConfig 类
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8ffeecb137444e498917476e66c2208d.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔部署8.png)
 <font color=#999AAA >代码如下，解析都在注释里
 
 
@@ -181,12 +181,12 @@ public class WebConfigurer implements WebMvcConfigurer {
 <font color=#999AAA >你创建的数据库右边，有一个管理，点一下，用数据库账号和密码登录进去
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f5f092af5af04f1286c0b4325d1dde44.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔部署9.png)
 
 
 <font color=#999AAA >左边会显示你创建的数据库，选中它，点上面的“导入”，就可以选择 .sql 文件进行数据导入了
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cd379e1376ef4d5797c059b03c265f37.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_19,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔部署10.png)
 
 
 
@@ -201,7 +201,7 @@ public class WebConfigurer implements WebMvcConfigurer {
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6df2a7d823414c3cba044cac7802ae19.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/宝塔部署11.png)
 
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">

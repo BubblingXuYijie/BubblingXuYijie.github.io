@@ -42,7 +42,7 @@ systemctl status rabbitmq-server
 ```bash
 rabbitmq-plugins enable rabbitmq_management
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/591ed9eec73a4047ab6be505924b17b1.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootRabbitMQ0.png)
 > 默认的guest用户是只能通过本机访问的，所以远程管理后台界面登录需要配置个用户，才能通过外网浏览器访问
 
 ```bash
@@ -77,7 +77,7 @@ firewall-cmd --reload
 
 # 二、新建项目
 > 新建一个 provider 一个 consumer，两个 springboot 项目，都需要引入下面的依赖，或者新建的时候勾选自动添加 rabbitmq 的依赖
-> ![在这里插入图片描述](https://img-blog.csdnimg.cn/5b1d3b9cfa884bed9a5f872a382279de.png)
+> ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootRabbitMQ1.png)
 
 ## 1、引入依赖
 
@@ -113,7 +113,7 @@ spring:
 ## 3、启动类开启 Rabbitmq 注解
 > consumer 和 provider 都需要这个注解
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dc670a48054b470290031f581397aeef.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootRabbitMQ2.png)
 
 
 ## 4、配置 provider 的 RabbitmqConfig
@@ -402,13 +402,13 @@ public class ReceiveHandler {
 ## 7、演示
 > 我们直接调用 sendCallback 这个接口
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c9561433f3eb47a7bbafcdbcec0f0877.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootRabbitMQ3.png)
 > consumer 接收到消息
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0b930cfa9df34dc0b3ea36ed5c4fc2ef.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootRabbitMQ4.png)
 > provider 触发回调方法
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f6aa192cdaf94979b85bf1b7db8756c9.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootRabbitMQ5.png)
 
 ---
 
@@ -481,10 +481,10 @@ public class ReceiveHandler {
 
 直接调用 sendDelay 方法，2次（因为两个方法都监听 queue_order，所以他们会交替获得消息）
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d6fd14b2e3e54e03a4808a2aa888b4d3.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootRabbitMQ6.png)
 3秒后 consumer 的两个方法都能接收到延时消息
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0ea4e60d905042528c5264f855f402df.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootRabbitMQ7.png)
 
 
 

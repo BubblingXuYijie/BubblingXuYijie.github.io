@@ -12,8 +12,9 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 # 前言
 > 众所周知，创建显示线程和直接使用未配置的线程池创建线程，都会被阿里的大佬给diss，所以我们要规范的创建线程。
 >  <br>
-> ![!\[在这里插入图片描述\](https://img-blog.csdnimg.cn/2293cdf5aa8341d6ac99c0ffe65fde00.png](https://img-blog.csdnimg.cn/f0bc3a21c8c64d0a89c47e0fd1876865.png)
-> ![在这里插入图片描述](https://img-blog.csdnimg.cn/48dc9dc2951c4b649a0a5275f766ab38.png)
+> ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/ThreadPool0.png)
+> ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/ThreadPool1.png)
+> ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/ThreadPool2.png)
 
 
 
@@ -27,7 +28,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 
 # 一、创建一个Springboot Web项目
 `需要一个Springboot项目`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a7ccd613feb2476d8e47fb4767f77e20.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/ThreadPool3.png)
 
 
 # 二、新建ThreadPoolConfig
@@ -227,10 +228,10 @@ public class AsyncMethod {
 
 # 四、演示结果
 > 首先演示 helloThread 这个接口，创建了2个线程，发现他们并发执行，成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ea052b9d43314fbb9dd36ebe996f77dd.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/ThreadPool4.png)
 <br>
 > 再演示 helloAsync 这个接口，发现 `System.out.println("print方法还在循环，但我已经可以执行了");`这行代码无需等待上面AsyncMethod中的 print 方法执行完毕，就可以开始执行，说明 print 方法是异步的，而且我输出的日志注意看，`[xyjAsyncPool - ]`，我设置的线程池前缀，已经生效了，成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/35b9086e7f904de0ba7a636b690304a0.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/ThreadPool5.png)
 
 
 

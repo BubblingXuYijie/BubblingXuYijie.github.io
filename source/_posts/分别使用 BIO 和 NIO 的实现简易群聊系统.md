@@ -7,12 +7,12 @@ tags:
     - NIO
     - Netty
     - SpringBoot
-cover: https://img-blog.csdnimg.cn/9de0e63deef14190b01100372a0e1c73.png
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/BIO&NIO0.png
 ---
 # 前言
 `下面是BIO和NIO的原理结构图，可以看出使用BIO时，每个客户端都会独占一个线程，而使用NIO时，一个Selector选择器独占一个线程，一个选择器下面可以连接多个客户端，然后Selector开始轮询下面的每一个客户端，这就提高了线程的复用，所以叫非阻塞IO`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9de0e63deef14190b01100372a0e1c73.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/BIO&NIO0.png)
 
 ---
 
@@ -102,8 +102,8 @@ public class BIOServer {
 
 ##  2、演示
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/42717364a5b14d5799b4476a18f77382.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/047af4efbb5c4e1f8252a1b4150a5178.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/BIO&NIO1.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/BIO&NIO2.png)
 
 ---
 
@@ -112,10 +112,10 @@ public class BIOServer {
 
 `首先Edit Configurations`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5c739589de8b49aca93b8e4e9f47e43a.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/BIO&NIO3.png)
 `然后选择要启动多个的类，我这里是 NIOClient，把Allow multiple instance勾上，确定就可以了`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c01bb4b783224d27934982aac4e5e80b.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/BIO&NIO4.png)
 
 ---
 
@@ -384,11 +384,11 @@ public class NIOClient {
 ## 2、演示
 >启动两个文件，先启动 NIOServer.java，再启动 NIOClient.java，NIOClient我启动了两个，因为服务器有转发功能，相当于一个群聊系统.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9efa8e81e838424e929e690d8db201b0.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e1859a97710644b6ad64e813de508b83.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/BIO&NIO5.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/BIO&NIO6.png)
 
-![!\[在这里插入图片描述\](https://img-blog.csdnimg.cn/faead29b143f](https://img-blog.csdnimg.cn/1b00e21e59264746b1a656b5aeb312a6.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d38faa8883c24c75bfb0764f50b6289f.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/BIO&NIO7.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/BIO&NIO8.png)
 
 
 

@@ -61,7 +61,7 @@ location /api/ {
 # 二、Springboot 物理地址映射配置
 
 <font color=#999AAA >新建 config 包，在里面新建 WebConfig 类
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8ffeecb137444e498917476e66c2208d.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Springboot静态资源映射0.png)
 <font color=#999AAA >代码如下，解析都在注释里
 
 

@@ -18,7 +18,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MyBatisPlusLogo.jpg
 5、支持多种数据库：支持 MySQL、MariaDB、Oracle、DB2、H2、HSQL、SQLite、Postgre、SQLServer 、达梦等多种数据库
 
 下面我将演示如何引入、配置、使用
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4a52c626d5a5498bb3e0422068c346a7.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MyBatisPlusLambda0.png)
 
 ---
 
@@ -304,8 +304,8 @@ public class UserController {
 
 > 调用一下，控制台打印出来 构造器构造的SQL
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8771ed26714749d0870692f1fb831d74.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/074f765d7bbe45b8ba313cd88a174fef.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MyBatisPlusLambda1.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MyBatisPlusLambda2.png)
 
 > 构造器还有 `.orderByAsc()`、`.exists()`、`.groupBy()`等条件，和SQL里面一样，大家可以自己试一下
 

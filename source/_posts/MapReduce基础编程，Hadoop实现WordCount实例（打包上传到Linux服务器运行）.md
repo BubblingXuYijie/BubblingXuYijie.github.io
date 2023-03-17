@@ -7,7 +7,7 @@ tags:
     - Linux
     - Hadoop
     - WordCount
-cover: https://img-blog.csdnimg.cn/20210429181140851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce0.png
 ---
 #  没有配置好环境的同学看我的传送门
 
@@ -20,7 +20,7 @@ cover: https://img-blog.csdnimg.cn/20210429181140851.png?x-oss-process=image/wat
 [Hadoop下载地址](https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz)
 
 bfsu这个镜像最快，清华的经常断
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429181140851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce1.png)
 
 下载完成后解压
 <hr>
@@ -29,23 +29,23 @@ bfsu这个镜像最快，清华的经常断
 新建一个普通的java项目就行，jdk最好用1.8，不然有可能会报错
 
 首先在新建的项目文件夹里新建一个文件夹，存放要导入的jar包
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429184017828.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce2.png)
 将下载的Hadoop解压后share里面的这五个文件夹里的jar包全部粘贴到项目目录下新建的“引入的jar包”内
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429184114827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429184159149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce3.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce4.png)
 
 在 idea 中配置引入的 jar 包
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429184244518.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce5.png)
 
 选择自己新建的存放 jar 包的文件夹
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429184313537.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce6.png)
 <hr>
 
 # 3、编写代码
 新建 WordCount java 文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429184438317.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce7.png)
 
 代码如下
 
@@ -163,25 +163,25 @@ public class WordCount_final
 ```
 
 然后就可以运行了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429184525316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce8.png)
 <hr>
 
 
 # 4、将编写的Java项目导出成jar包
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429184244518.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429184710798.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce9.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce10.png)
 点击OK
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429184800803.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce11.png)
 点击OK
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429184818713.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce12.png)
 然后
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429185120137.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429185137470.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce13.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce14.png)
 
 完成后就在项目目录下的 out 文件夹下的 artifacts 生成了 jar 包
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429184952876.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce15.png)
 <hr>
 
 #  5、将jar包导入到Linux
@@ -198,7 +198,7 @@ cd /usr/local/hadoop
 ./bin/hadoop fs -mkdir /input
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042918533672.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce16.png)
 把 jar 包复制到服务器
 移动到创建的文件夹 input 里面
 /home/xyj/classes/hadoop.jar 是jar包在我的服务器的位置， 这句话意思是把 jar 包移动到 /input 文件夹
@@ -209,14 +209,14 @@ cd /usr/local/hadoop
 bin/hadoop fs -put /home/xyj/classes/hadoop.jar /input
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429185407526.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce17.png)
 查看是否上传成功
 
 ```bash
 hadoop fs -ls /input
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210429185420292.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MapReduce18.png)
 输入 `bin/hadoop MapReduce-WordCount.jar wordcount /input /output`运行jar包
 
 MapReduce-WordCount.jar为打包的jar包名，可能你们的不一样

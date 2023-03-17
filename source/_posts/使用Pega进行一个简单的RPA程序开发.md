@@ -33,37 +33,37 @@ Pega总的来说可以做两件事——BPM(Business Process Management) 和 RPA
 ## 新建一个Pega项目
 打开Visual Studio，当然是配置好Pega的VS，配置教程暂时不写，我也还没弄清楚。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/220a7339cfdf465781478b8ca7b2bce0.jpeg)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaRPA0.png)
 
 
 ## 新建universal web application
 指定一个程序要进行操作的网站
 右键新建的Pega项目“Project6”，添加-新建项，选择universal web application，不选web application是因为它仅支持IE浏览器。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6dd57d1274654105a04892fafae4a85f.jpeg)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/07f5a6bd61d44331afeb64293560797e.jpeg)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaRPA1.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaRPA2.png)
 ##  抓取页面元素
 双击右边我们新建的universal web，会打开中间界面，单击左边的web application，右下角会出现属性设置。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4dd7484d01f94564b50dd8b99237fc1c.jpeg)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaRPA3.png)
 startPage是要打开的网站的网址，我们用Bing搜索引擎来演示。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c0300f1b72d542b799d12158ff0f2a24.jpeg)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaRPA4.png)
 
 设置完成后点击start interrogation，会打开刚刚设置的startPage网址，并出现一个小弹窗。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f2136f9c1ea04478a4138bc3db2c1baf.jpeg)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c7ce84ad67aa41719694477ba861bb11.jpeg)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaRPA5.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaRPA6.png)
 我们一般选择模式为select elements，拖动弹窗的那个靶心一样的图标，放到要抓取的页面元素上
 ，这里我抓取搜索框。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e27a9e9c33d34d8fa3fa46a295fc4989.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaRPA7.png)
 会出现抓取的页面结构，我们选择 input 标签，点击 create
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4b24003ae5ea494eabd98fb48c29c5ab.jpeg)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaRPA8.png)
 VS中就出现了我们刚刚抓取的搜索框
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c7bfe66461bc47f3a7294c0da92efb8a.jpeg)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaRPA9.png)
 
 按照刚刚的方法，抓取搜索框右边的搜索按钮
 
@@ -74,7 +74,7 @@ VS中就出现了我们刚刚抓取的搜索框
 ##  新建Automation
 新建的 Pega 项目应该自带一个 Automation1，如果没有，就自己新建一个，还是右键 pega 项目，新建项
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f47fa99002684f61a6268e2a25c95579.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaRPA10.png)
 
 ##  开始构建
 流程的起始要添加一个 Execute ，然后点击左边的 universal web application，选择属性栏里面的 startPage，设置打开的网址，然后选择动作栏里面的 started，然后等待这个动作，防止电脑卡，浏览器打开的慢导致报错，然后选择方法栏里面的 start 方法，setup连接 start，选中我门抓取的搜索框，在左下方属性栏把 text 属性拖进来，连接到fried。图中蓝色的线代表传值，黄色的线代表流程走向。工具箱里面的 string 方法是创建一个变量，赋值给搜索框的 text 属性，然后选中我们抓取的搜索按钮 searchButton，在方法栏中把performClick拖出来，代表点击一下搜索按钮。
@@ -87,12 +87,12 @@ VS中就出现了我们刚刚抓取的搜索框
 
 
 上面的演示已经演示了80%的构建过程，下面是完整的，最后的三步要你们自己研究哦，成功后，会和下面的成果演示一样
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5a33f0a7ef6c4285ba04961c974a30fb.jpeg)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaRPA11.png)
 
 
 ---
 
 #  成果演示
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7cabd6a619ee44ed9efb76ac34d281a2.gif)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaRPA12.gif)
 
 

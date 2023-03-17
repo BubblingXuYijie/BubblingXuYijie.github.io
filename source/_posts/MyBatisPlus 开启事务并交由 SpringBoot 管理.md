@@ -44,10 +44,10 @@ SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4dd82b9a] was n
 
 <font color=#999AAA> 在启动类上添加一个注解 `@EnableTransactionManagement`，最好自己手打然后回车键自动 import class，复制粘贴的话可能无法识别到这个注解。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3083c337c466404b8fb638559d5a567b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MybatisPlus事务0.png)
 
 <font color=#999AAA >然后在每个 Service 上都添加一个注解 `@Transactional(rollbackFor = RuntimeException.class)`，代表在 RuntimeException 异常发生时进行回滚，@Transactional里面的参数类型还有很多，有兴趣可以自己学习学习
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2ad1344ad981465387f1de32fe2cd31b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_19,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MybatisPlus事务1.png)
 <font color=#999AAA >然后查询的时控制台出现以下信息 Registering transaction synchronization for SqlSession ，就是配置成功了
 
 ```bash

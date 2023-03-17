@@ -102,7 +102,7 @@ var router = new VueRouter({
         })
 ```
 Query方式的网页地址栏后面是这样：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210510110403931.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Vue路由传参0.png)
 ##  Params
 
 
@@ -117,11 +117,11 @@ Params方法的router-link里面的to，to="/login/1111/2222"，
         })
 ```
 Params方式的网页地址栏后面是这样：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210510110420216.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Vue路由传参1.png)
 注意Params传参的路由配置里，我故意把path里写成{path:"/login/:name/:id",component:Login}，把name放到了前面，所以name排在第一位，对应router-link里面的to="/login/1111/2222"的第一位“1111”
 
 ```html
 {{this.$route.params.id}}{{this.$route.params.name}}
 ```
 这两句获取参数是下面这样的，也就是id是2222，name是1111
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210510111041254.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Vue路由传参2.png)

@@ -7,7 +7,7 @@ tags:
     - MySQL
     - 数据库
     - 运维测试
-cover: https://img-blog.csdnimg.cn/8845e12f1f754b6793d9c04400847290.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter0.png
 ---
 # 前言
 
@@ -20,7 +20,7 @@ cover: https://img-blog.csdnimg.cn/8845e12f1f754b6793d9c04400847290.png?x-oss-pr
 ##  下载
 
 <font color=#999AAA >[官网下载](https://jmeter.apache.org/download_jmeter.cgi)，下载二进制的这个 zip
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8845e12f1f754b6793d9c04400847290.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter0.png)
 ##  配置环境变量
 
 <font color=#999AAA >然后解压到你喜欢的位置，配置环境变量，新建一个 JMETER_HOME
@@ -30,11 +30,11 @@ cover: https://img-blog.csdnimg.cn/8845e12f1f754b6793d9c04400847290.png?x-oss-pr
 <font color=#999AAA >在 CLASSPATH 的最前部加上
 `%JMETER_HOME%\lib\ext\ApacheJMeter_core.jar;%JMETER_HOME%\lib\jorphan.jar;%JMETER_HOME%\lib\logkit-2.0.jar;`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/705ce571af0641049321690cb25635c1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter1.png)
 ##  导入 MySQL 驱动
 
 <font color=#999AAA >把 MySQL 的驱动放进解压的 jmeter 根目录的 lib 文件夹里（这个下载不用教了吧）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/477ee88af59d4db09482e71c92801055.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter2.png)
 
 
 
@@ -44,11 +44,11 @@ cover: https://img-blog.csdnimg.cn/8845e12f1f754b6793d9c04400847290.png?x-oss-pr
 
 <font color=#999AAA >打开命令行，输入`jmeter.bat`就会自动打开 jmeter 的图形界面，建议勾选一下中文
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/86f11a3d2894433e8d8e61b676ec72a9.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8098b7d3e7554a86a656d595515271b3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_18,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter3.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter4.png)
 <font color=#999AAA >点击下面的浏览，找到你的 lib 里的驱动，双击一下
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cfc373dd3646441aaa3ad6351b5f887c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter5.png)
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
@@ -58,35 +58,35 @@ cover: https://img-blog.csdnimg.cn/8845e12f1f754b6793d9c04400847290.png?x-oss-pr
 ##  配置
 
 <font color=#999AAA >右键 TestPlan 新建 线程组
-![在这里插入图片描述](https://img-blog.csdnimg.cn/abd37794e02045a5882ef4e9472ffa06.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_13,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter6.png)
 
 <font color=#999AAA >线程数就是模拟的用户数， Ramp-Up时间 是指用户在多久时间内请求完毕，
 下面的意思是 在 1 秒内，100 个用户同时请求数据库，循环次数代表一共执行 5 次。建议线程数设置大一点，效果好。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e0b5ffd15d8c47d49d6691e525c2e4a5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter7.png)
 
 <font color=#999AAA >右键线程组，添加一个 JDBC 的配置元件，里面只需要配置下面框选的
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e1a872ac00b347e191accac2a0930f59.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0d11ed7b432d42f7aa155b3d4a1a004a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter8.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter9.png)
 
 
 <font color=#999AAA >右键 线程组，添加一个 JDBC Request 取样器，test 是前面配置的 pool name，框里写 SQL 语句，类型可以选查询或修改
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6e3826a1daa74736b7f5a1b63d1dd865.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_19,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/302a8f7e41544cdfbb60cfb67122de71.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter10.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter11.png)
 
 <font color=#999AAA >右键 线程组，添加几个监听器，这是看测试结果的东西，你们可以多加点自己玩玩。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9b99f2ee07004b23a56a82a1afa0c1c5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter12.png)
 
 
 ##  观察结果
 
 <font color=#999AAA >如果 结果树 里面大多都是报错，说明 线程数 设置的太大了，也就是你的数据库承受不起。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2f40537ef3664a1a98c11a14bcb64070.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/db0fef2163c64403b63f0d7dcc53ed1a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter13.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/JMeter14.png)
 
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">

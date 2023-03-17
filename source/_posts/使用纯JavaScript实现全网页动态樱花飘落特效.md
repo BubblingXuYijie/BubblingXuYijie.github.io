@@ -6,7 +6,7 @@ tags:
     - JavaScript
     - HTML
     - Vue
-cover: https://img-blog.csdnimg.cn/20200629191933926.gif
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/全屏樱花飘落0.gif
 ---
 
 ## 前言
@@ -197,7 +197,7 @@ cover: https://img-blog.csdnimg.cn/20200629191933926.gif
 ## 实现效果如图
 真实画面是流畅的，此处为录制的GIF帧率较低
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629191933926.gif)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/全屏樱花飘落0.gif)
 
 <hr>
 
@@ -205,7 +205,7 @@ cover: https://img-blog.csdnimg.cn/20200629191933926.gif
 
 <font color=#999AAA >首先新建一个 js 文件，把代码复制进去
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/130153e37bb648ecab689e9d513ec504.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/全屏樱花飘落1.png)
 
 
 
@@ -387,5 +387,5 @@ export function stopp() {
 ```
 ###  调用方法
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6456b66e38d046e5b0f6cfd11cbadbb2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_14,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/全屏樱花飘落2.png)
 

@@ -67,7 +67,7 @@ System.out.println("经过CBC解密的密文为：" + SM4Utils.decryptData_CBC("
 
 看一看你的项目根目录，应该会有一个 `.eslintrc.js` 文件，添加 rules 和 'globals'，即使我已经很努力的修改代码了，但是还是有一个方法 “base64js” 会报错，所以我们把这个方法忽略掉。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3d82af26a9384635be58fb427dfcf47c.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SM4加密0.png)
 
 ```javascript
 rules: {
@@ -99,7 +99,7 @@ const sm4 = new SM4Util();
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/048779b747ec417599276c93a20fcef3.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SM4加密1.png)
 
 
 
@@ -107,7 +107,7 @@ const sm4 = new SM4Util();
 ##  在组件中调用
 
 <font color=#999AAA >如图，引入 `import {SM4Util} from '@/utils/sm4';` from后面的路径自己调整
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0f6dfeb056184b13b363892875a02558.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SM4加密2.png)
 
 <font color=#999AAA >如图，开始加密输入框的密码，并传输到后端，mounted 这样写可以在控制台直接输出 123456 的加密结果。传输到后端我就不演示了。
 
@@ -153,7 +153,7 @@ methods:{
 ```
 
 ##  加密结果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9e4ad6e28d4343cc9d9dc71a69438fc8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_10,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SM4加密3.png)
 
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
@@ -186,7 +186,7 @@ methods:{
 ##  复制我的 SM4 加解密代码
 
 <font color=#999AAA >一共有 4 个文件，我直接给你们下载吧，不需要积分，下载后在项目里放在一起
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0af0e0bc96834e28a0a4a46edc4cdaea.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SM4加密4.png)
 
 [SM4前后端加解密下载链接](https://download.csdn.net/download/qq_48922459/85001193)
 有很多用户反映CSDN这个资源要什么下载码，我下面放一个github的仓库，里面有文件和演示demo
@@ -200,11 +200,11 @@ methods:{
 
 <font color=#999AAA >在 `SM4Utils` 那个文件里面有一个 main 方法，我写好了，运行
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1ffc1f4412b64585946372301ffffb9e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SM4加密5.png)
 
 
 <font color=#999AAA >看，和，和前端的加密结果一样，也可以解密出来，秘诀就是前面说的前后端的“钥匙要一样”
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f22cee555b4d43df9cb1e30ef08680c8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_15,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SM4加密6.png)
 
 <font color=#999AAA >ECB 和 CBC 的区别你们可以自己了解一些，反正用 CBC 就完事了，据说更安全
 

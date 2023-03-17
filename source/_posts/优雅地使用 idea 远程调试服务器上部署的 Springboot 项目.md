@@ -7,7 +7,7 @@ tags:
     - SpringBoot
     - idea
     - 线上调试
-cover: https://img-blog.csdnimg.cn/f113d0d903a44e1bbb05b78fd3cb475e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/远程调试0.png
 ---
 # 前言
 
@@ -29,13 +29,13 @@ nohup java -jar -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address
 
 
 <font color=#999AAA >Edit Configurations，添加一个 Remote JVM Debug，写上你的服务器 ip 和刚刚启动的 adress 端口----10000
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8f2263f8df2848f9993c5685b583a56c.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/远程调试1.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f113d0d903a44e1bbb05b78fd3cb475e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/远程调试0.png)
 
 <font color=#999AAA >然后点击 Debug ，控制台出现下方即为成功
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ccbca659cf3844cba5d3a50f5461d10c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_14,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/远程调试2.png)
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 

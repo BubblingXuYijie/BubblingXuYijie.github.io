@@ -21,11 +21,11 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 
 
 <font color=#999AAA >选择左边那个 Spring Initializr 来创建
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b3e3c4b42d5a4ad38915a6cdb760bddb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_19,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootAOP0.png)
 
 <font color=#999AAA >这一步是选择项目要用到的依赖，勾选以后就不用配置 Maven 的 pom 了，当然这里面都是些常用依赖，里面没有的还是要手动添加 pom，Springboot 的Web项目选择Spring Web就行了，根据需要选择
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ad4cb1031cac46ccb917cffecae10765.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_19,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootAOP1.png)
 
 <font color=#999AAA >完成后我们向 ==pom.xml== 中添加一条依赖，用于日志的拦截和输出
 
@@ -40,7 +40,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 
 <font color=#999AAA >先建立项目结构， annotation 和 aop 就是用于日志拦截的文件
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/655b405402bd4867bc373b926316eb26.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootAOP2.png)
 
 ---
 
@@ -267,12 +267,12 @@ public class LogAspect {
 <font color=#999AAA >我没有配置 application.properties 文件，所以端口默认8080，/log是controller里面方法上面配置的请求路径，?name=啦啦啦 ，name 是 controller 里面方法的传参。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9a8c4fe91c50448dac165f0cd04d4f80.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootAOP3.png)
 
 <font color=#999AAA >你们自己在在 `LogAspect` 里面添加一点打印语句，控制台打印出拦截结果，请求地址、请求方法、传参 等等
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9317421854874cb987e050aa473bbf4e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootAOP4.png)
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
@@ -302,5 +302,5 @@ execution：指定 controller 包下的注解，.*代表controller包下所有�
 
 
 <font color=#999AAA >@Arround 是个万能注解，可以代替 @Before 和 @After，所以我在保存数据库的那个文件里只是用了 @Arround，保存到数据库的字段可以自己定制，下面是我另一个项目的日志，给你们参考一下。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/77b717e552e94421a00aae464b0a83fe.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootAOP5.png)
 

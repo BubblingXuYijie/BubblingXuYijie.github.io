@@ -14,7 +14,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Vue.jpeg
 this.$refs.chatting.getMessageLib()
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e4f88abe4ea34ff58fa52c5c627af6d7.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/VueRef报错0.png)
 
 <font color=#999AAA >上述报错大多出现在操作弹窗子组件的页面元素的情景中，原因是子组件还未渲染到父组件的 `DOM` 中，就开始对子组件的元素进行操作了</font>
 

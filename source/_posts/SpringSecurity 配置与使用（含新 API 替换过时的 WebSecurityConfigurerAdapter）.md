@@ -316,20 +316,20 @@ public class TestController {
 
 > 我们先访问 `http://127.0.0.1:8081/test/any`，这时我们还没有登录，这个接口我们在`config` 里面配置了`.permitAll()`，所以没有被拦截，直接访问成功
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d64a9859d0174f2fb7d05e0f987651ee.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringSecurety0.png)
 > 下面我门访问 `http://127.0.0.1:8081/test/user`，发现浏览器自动跳转到了登录界面，这个登录界面是SpringSecurity内置的，如需使用自定义页面，下面会讲
 >
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2c3a050987ce4b8bbcd65c14ab2ece4c.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringSecurety1.png)
 > 输入账号密码点击 Sign in，发现浏览器自动跳回`http://127.0.0.1:8081/test/user`，访问成功
 > 这里我们用户名可以随便输入，因为上面`UserDetailsServiceImpl`中我们没有指定用户名，所以 123456 这个密码所有用户都能用
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/85b9b64cdf934e14a8ba899e4f2297cb.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringSecurety2.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/78b40ea88cf94802bd659a65dea0ec79.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringSecurety3.png)
 
 > 如果访问 `/test/admin` 这个接口，报错 403，代表无权限
 >
-![在这里插入图片描述](https://img-blog.csdnimg.cn/534b496df8e1431e970cf6a6ad70e7a1.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringSecurety4.png)
 
 
 ---

@@ -132,12 +132,12 @@ actions:{
 	}
 ```
 #  运行代码
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210510113954880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/VueStore0.png)
 
 如上图，我们先点击mutations按钮，右边控制台输出了mutations里add方法的state的值和传来的pare的值
 
 接下来我们再点击actions按钮，右边控制台输出了actions里add方法的content的值，content的值里面包含上面的state
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210510114826664.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/VueStore1.png)
 
 
 

@@ -6,7 +6,7 @@ tags:
     - Vue
     - SpringBoot
     - Base64
-cover: https://img-blog.csdnimg.cn/f40d171b73764c7d8b200020dd503acf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_12,color_FFFFFF,t_70,g_se,x_16
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Base640.png
 ---
 # 前言
 
@@ -169,8 +169,8 @@ public class Base64Util {
     }
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f40d171b73764c7d8b200020dd503acf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA57mB5Y2O5bC95aS05ruh5piv5q6H,size_12,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/89cb0a72f8724ce3a4cf67d6918af437.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Base640.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Base641.png)
 
 ## 2.读取的话就不写了，看我的另一篇，另一篇怎么从服务器读取也有教
 

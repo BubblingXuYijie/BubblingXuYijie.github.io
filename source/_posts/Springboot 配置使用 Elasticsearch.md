@@ -34,15 +34,15 @@ sudo systemctl start elasticsearch.service
 # 设置开机启动（可选）
 sudo systemctl enable elasticsearch.service
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0a6849f927014a11814e0c54788f02ee.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/51bde4e4363d4163affa6d140ea7354b.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootElasticsearch0.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootElasticsearch1.png)
 
 不要忘记开放防火墙端口，控制台输入`curl -X GET "localhost:9200/"`或浏览器访问 `IP:9200`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/27afbe9e882f4c6fa7f762513a23ae49.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootElasticsearch2.png)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d50e6c08ce8c4e62b5ea12c32925cb7b.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootElasticsearch3.png)
 > 开放防火墙 9200 端口
 
 ```bash
@@ -62,7 +62,7 @@ firewall-cmd --reload
 
 > 先给你们看一下项目结构
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6e88ddbcd6454373a95addd1182643f3.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootElasticsearch4.png)
 
 
 ## 1、引入依赖
@@ -196,7 +196,7 @@ public interface UserRepository extends ElasticsearchRepository<User, String> {
 ## 5、新建 Controller
 > 下面我把这3个controller的代码放出来，方法很简单，都是增删改查，都有写注释，等下测试用
 >
-![在这里插入图片描述](https://img-blog.csdnimg.cn/02140214eb2b491db530d6098f5f056c.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootElasticsearch5.png)
 `DocumentTestController.java`
 
 ```java
@@ -470,24 +470,24 @@ public class UserController {
 ### (1) 启动项目
 > 可以看到，我们的`user`索引自动添加到`elasticsearch`里面了
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bb3919ef2a244a3c9c035210f8cd320a.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootElasticsearch6.png)
 
 ### (2) 查询索引
 
 > 我们调用 `http://127.0.0.1:8081/indexTest/get`，可以看到，控制台打印出 user 的信息
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ae74bbc4b3b94462b771164a0852355c.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootElasticsearch7.png)
 > `IndexTestController`里面的方法都是操作索引的，删除、新增等
 
 ### (3) 新增数据
 
 > 我们先调用`http://127.0.0.1:8081/documentTest/insert`，往`user`里面添加一条数据，这是`DocumentTestController`里面的方法，这个controller里面的方法可以操作没有继承 `ElasticsearchRepository` 的实体类
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7e8208f32a5a4775a484b2b9ff062814.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootElasticsearch8.png)
 
 > 下面我们查询出来我们刚刚插入的数据，这次我们调用 `repository`里面的内置方法，`http://127.0.0.1:8081/user/get`，查询成功
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3be22e490e124316904ebfe18951cb70.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootElasticsearch9.png)
 
 ---
 
@@ -495,7 +495,7 @@ public class UserController {
 
 > 对于多条件查询，我们可以使用`ElasticsearchRepository`自带的`衍生查询`，关键词 find by 等等，有代码提示
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/84a7f95839f44627a3a427104b22fea6.png)
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootElasticsearch10.png)
 
 
 ```java
