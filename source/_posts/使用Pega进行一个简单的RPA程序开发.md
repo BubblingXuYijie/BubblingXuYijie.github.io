@@ -81,8 +81,7 @@ VS中就出现了我们刚刚抓取的搜索框
 
 
 
-[video(video-4OWXf9Z4-1656057397844)(type-csdn)(url-https://live.csdn.net/v/embed/218751)(image-https://video-community.csdnimg.cn/vod-84deb4/faa34210cf1041f48c148f54c8acad74/snapshots/946076a9409845c8b503d99022716a25-00005.jpg?auth_key=4809656909-0-0-dc9e0ca767056dbe4eb6437e7e61053c)(title-Pega RPA流程构建视频)]
-
+<iframe frameborder="0" src="https://live.csdn.net/v/embed/218751" allowfullscreen height=540 width=960></iframe>
 
 
 
