@@ -8,6 +8,40 @@ tags:
     - Base64
 cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Base640.png
 ---
+
+# 注意！！！
+==注意！！！==
+> 1、现在我已经将把 `base64` 转换成文件保存到指定位置的代码上传到了 `maven 中央仓库`，你们可以直接引入这个依赖使用
+> 2、如果想学习源码，那么就继续往下面看，下面第二章是我最简化的代码，实际我封装的方法要更复杂，支持更多传参类型和容错，比如你不需要传入文件后缀名，可以自动判断文件类型而你不需要传入文件后缀名，自动判断windows还是linux的路径格式，自动处理base64前缀，增加更多方法，将文件转换为 base64 码，你可以传入文件路径或者二进制文件流。
+
+```xml
+<!-- https://mvnrepository.com/artifact/icu.xuyijie/Base64Utils -->
+<dependency>
+    <groupId>icu.xuyijie</groupId>
+    <artifactId>Base64Utils</artifactId>
+    <version>1.2.1</version>
+</dependency>
+```
+```java
+// 将文件编码成Base64，可传入文件全路径，或者一个 File 对象
+String s = Base64Util.transferToBase64("D:/下载/Screenshot_20221008-090627.png");
+File file = new File(filePath);
+String s = Base64Util.transferToBase64(file);
+//打印转换的base64
+System.out.println(s);
+
+
+// 将Base64转换成文件保存到指定位置，可传入文件全路径或者分别传入保存位置和文件名，s是base64码
+String s1 = Base64Util.generateFile(s, "D:/下载/aaa.png");
+String s1 = Base64Util.generateFile(s, "D:/下载", "aaa.png");
+//当你不知道前端传来的文件类型时，可以不写文件类型后缀，代码会自动判断文件类型
+String s1 = Base64Util.generateFile(s, "D:/下载/aaa");
+//打印保存路径
+System.out.println(s1);
+```
+
+---
+
 # 前言
 
 <font color=#999AAA >整体思路：
@@ -64,19 +98,25 @@ methods:{
 String s = Base64Util.transferToBase64("D:/下载/Screenshot_20221008-090627.png");
 File file = new File(filePath);
 String s = Base64Util.transferToBase64(file);
+//打印转换的base64
 System.out.println(s);
-// 将Base64转换成文件保存到指定位置，可传入文件全路径或者分别传入保存位置和文件名
+
+
+// 将Base64转换成文件保存到指定位置，可传入文件全路径或者分别传入保存位置和文件名，s是base64码
 String s1 = Base64Util.generateFile(s, "D:/下载/aaa.png");
 String s1 = Base64Util.generateFile(s, "D:/下载", "aaa.png");
+//当你不知道前端传来的文件类型时，可以不写文件类型后缀，代码会自动判断文件类型
+String s1 = Base64Util.generateFile(s, "D:/下载/aaa");
+//打印保存路径
 System.out.println(s1);
 ```
 
 
 # 二、Springboot 后端
 
+> 这里是一些简单的源码示例
 
-
-##  引入Base64依赖
+##  1、引入Base64依赖
 
 ```xml
 <!--        工具（包含Base64）-->
@@ -89,11 +129,9 @@ System.out.println(s1);
 
 
 
-##  在项目里新建 utils 包，新建一个Base64Util类
+##  2、在项目里新建 utils 包，新建一个Base64Util类
 
 ```java
-package pers.xuyijie.communityinteractionsystem.utils;
-
 import org.apache.commons.codec.binary.Base64;
 import java.io.*;
 
@@ -125,47 +163,33 @@ public class Base64Util {
 ```
 
 
+> 下面模拟一个保存用户头像信息的方法
 
-<font color=#999AAA >Service 代码如下：
-
-==String base64 = StringUtils.substringAfter(userInfo.getUserHead(),";base64,");== 这句是把 base64 码的前缀去掉
-
-
-==path== 里面就写你要保存图片的位置，和文件名，意思是保存到 F 盘根目录，文件名是以用户名+当前时间毫秒数命名的。
-
-==Base64Util.GenerateImage(base64,path);== 是用我们的工具把前端传来的 base64 解析成图片保存在path定义的路径下
+==String base64 = StringUtils.substringAfter(userInfo.getUserHead(), ";base64,");== 这句是把 base64 码的前缀去掉，base64转换为图片是不需要这个前缀的，不去掉会影响转换，`当然，如果你使用了我一里面封装的依赖，就不需要这一行自己去除了，代码会自动判断是否去除。`
 
 
+==path== 里面就写你要保存图片的位置，和文件名，文件名是以用户手机号+当前时间毫秒数命名的，记得写文件类型，我这里是png，`当然，如果你使用了我一里面封装的依赖，就不需要写后缀了，会自动判断文件类型。`
 
-==File file = new File(path)；userInfo1.setUserHead(file.getPath());== 就是保存 path 路径到数据库
+==Base64Util.GenerateImage(base64, path);== 是用我们的工具把前端传来的 base64 解析成图片保存在path定义的路径下
+
+
+
+==File file = new File(path)；
+userInfo1.setUserHead(file.getPath());== 就是保存 path 路径到数据库
 
 
 ```java
 @Override
-    public ResultCode userInfo(UserInfo userInfo, HttpServletRequest request) {
-        HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");
-        String mobilePhone = user.getMobilePhone();
-        QueryWrapper<UserInfo> selectQuery = new QueryWrapper();
-        selectQuery.eq("mobile_phone", mobilePhone);
-        //用户表和用户信息表里面的mobile_phone是一一对应的
-        UserInfo userInfo1 = userInfoMapper.selectOne(selectQuery);
+    public String userInfo(UserInfo userInfo) {
         //处理前端传来的base64为文件路径
-        String base64 = StringUtils.substringAfter(userInfo.getUserHead(),";base64,");
+        String base64 = StringUtils.substringAfter(userInfo.getUserHead(), ";base64,");
         //保存到设置的路径下，文件名手机号加毫秒命名
         String path = "F:\\" + user.getMobilePhone() + System.currentTimeMillis() + ".png";
-        Base64Util.GenerateImage(base64,path);
+        Base64Util.GenerateImage(base64, path);
         File file = new File(path);
         userInfo1.setUserHead(file.getPath());
-        userInfo1.setUsername(userInfo.getUsername());
-        userInfo1.setAge(userInfo.getAge());
-        userInfo1.setSex(userInfo.getSex());
-        userInfo1.setHomeTown(userInfo.getHomeTown());
-        userInfo1.setEditTime(new Date());
-        userInfoMapper.updateById(userInfo1);
-        user.setUsername(userInfo.getUsername());
         userMapper.updateById(user);
-        return new ResultCode(200);
+        return "保存成功";
     }
 ```
 
