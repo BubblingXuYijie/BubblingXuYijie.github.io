@@ -196,15 +196,10 @@ userInfo1.setUserHead(file.getPath());== 就是保存 path 路径到数据库
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Base640.png)
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Base641.png)
 
-## 2.读取的话就不写了，看我的另一篇，另一篇怎么从服务器读取也有教
-
-传送门：[Springboot物理地址映射+Nginx静态资源代理实现前端上传并访问服务器图片](https://blog.csdn.net/qq_48922459/article/details/122035967?spm=1001.2014.3001.5501)
-
-
-
-
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
 # 总结
+>读取的话就不写了，看我的另一篇，另一篇怎么从服务器读取也有教
 
+传送门：[Springboot物理地址映射+Nginx静态资源代理实现前端上传并访问服务器图片](https://blog.csdn.net/qq_48922459/article/details/122035967?spm=1001.2014.3001.5501)
