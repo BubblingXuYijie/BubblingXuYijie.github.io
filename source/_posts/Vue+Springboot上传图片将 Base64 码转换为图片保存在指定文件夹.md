@@ -19,7 +19,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Base640.png
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>Base64Utils</artifactId>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
 </dependency>
 ```
 ```java
@@ -77,39 +77,6 @@ methods:{
 ```
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
-
-
-# 一.五 注意！！！
-==注意！！！==
-> 1、现在我已经将把 `base64` 转换成文件保存到指定位置的代码上传到了 `maven 中央仓库`，你们可以直接引入这个依赖使用
-> 2、如果想学习源码，那么就继续往下面看二，二里面是我最简化的代码，实际我封装的方法要更复杂，支持更多传参类型和容错，比如可以自动判断文件类型而你不需要传入文件后缀名，接受包含或以 '/' 、'\\' 结尾或者以 '' 结尾的路径格式，增加方法，将文件转换为 base64 码，你可以传入文件路径或者二进制文件流。
-> 3、下面是引入依赖和使用方法
-
-```xml
-<!-- https://mvnrepository.com/artifact/icu.xuyijie/Base64Utils -->
-<dependency>
-    <groupId>icu.xuyijie</groupId>
-    <artifactId>Base64Utils</artifactId>
-    <version>1.2.1</version>
-</dependency>
-```
-```java
-// 将文件编码成Base64，可传入文件全路径，或者一个 File 对象
-String s = Base64Util.transferToBase64("D:/下载/Screenshot_20221008-090627.png");
-File file = new File(filePath);
-String s = Base64Util.transferToBase64(file);
-//打印转换的base64
-System.out.println(s);
-
-
-// 将Base64转换成文件保存到指定位置，可传入文件全路径或者分别传入保存位置和文件名，s是base64码
-String s1 = Base64Util.generateFile(s, "D:/下载/aaa.png");
-String s1 = Base64Util.generateFile(s, "D:/下载", "aaa.png");
-//当你不知道前端传来的文件类型时，可以不写文件类型后缀，代码会自动判断文件类型
-String s1 = Base64Util.generateFile(s, "D:/下载/aaa");
-//打印保存路径
-System.out.println(s1);
-```
 
 
 # 二、Springboot 后端
