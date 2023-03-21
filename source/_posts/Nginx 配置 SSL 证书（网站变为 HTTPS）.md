@@ -31,16 +31,18 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/NginxLogo.png
 
 ```xml
 server {
-	listen   443;
-	server_name  111.111.111.111; 	
-	ssl on;
-	# 下面两个 pem 和 key 换成你自己证书的
-	ssl_certificate /data/nginx/cert/6722197_godata.dongtou.gov.cn.pem;
-	ssl_certificate_key /data/nginx/cert/6722197_godata.dongtou.gov.cn.key;
-	ssl_session_timeout 5m;
-	ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
-	ssl_protocols TLSv1 TLSv1.1 TLSv1.2;	
-	ssl_prefer_server_ciphers on;
+        listen   443 ssl http2;
+        server_name  111.111.111.111;
+
+        # 下面两个 pem 和 key 换成你自己证书的
+        ssl_certificate /data/nginx/cert/6722197_godata.dongtou.gov.cn.pem;
+        ssl_certificate_key /data/nginx/cert/6722197_godata.dongtou.gov.cn.key;
+        ssl_session_timeout 5m;
+        ssl_session_cache shared:SSL:1m;
+        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+        ssl_prefer_server_ciphers on;
+}
 ```
 
 
