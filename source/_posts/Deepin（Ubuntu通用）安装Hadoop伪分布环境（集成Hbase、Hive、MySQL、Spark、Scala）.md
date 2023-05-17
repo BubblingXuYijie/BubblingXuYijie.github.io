@@ -17,8 +17,8 @@ Hadoop3.2.2、Hbase2.4.2、Hive3.1.2、MySQL8.0.24、Spark3.1.1、Scala2.13.5
 （即使可以，也不推荐使用apt安装，因为版本会报错，所有我下面均使用压缩包来安装）
 
 # 下载所有环境
-[Hadoop3.2.2下载](https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz) bfsu这个镜像下载最快![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/HadoopDownload.png)
-[Hbase2.4.2下载](https://www.apache.org/dyn/closer.lua/hbase/2.4.2/hbase-2.4.2-bin.tar.gz)
+[Hadoop3.2.2下载](https://archive.apache.org/dist/hadoop/common/hadoop-3.2.2/) bfsu这个镜像下载最快![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/HadoopDownload.png)
+[Hbase2.4.2下载](https://dlcdn.apache.org/hbase/2.4.17/) 选择bin.tar.gz
 
 [Hive3.1.2下载](https://mirrors.bfsu.edu.cn/apache/hive/hive-3.1.2/)选择bin.tar.gz
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop1.png)
