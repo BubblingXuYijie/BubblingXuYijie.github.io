@@ -1,5 +1,5 @@
 ---
-title: Deepin（Ubuntu通用）安装Hadoop伪分布环境（集成Hbase、Hive、MySQL、Spark、Scala）
+title: Deepin（Linux）安装Hadoop伪分布环境（集成Hbase、Hive、MySQL、Spark、Scala）
 date: 2021-04-08 12:14:25
 categories: Linux
 tags:
@@ -17,7 +17,7 @@ Hadoop3.2.2、Hbase2.4.2、Hive3.1.2、MySQL8.0.24、Spark3.1.1、Scala2.13.5
 （即使可以，也不推荐使用apt安装，因为版本会报错，所有我下面均使用压缩包来安装）
 
 # 下载所有环境
-[Hadoop3.2.2下载](https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz) bfsu这个镜像下载最快![在这里插入图片描述](https://img-blog.csdnimg.cn/2021040811535278.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4OTIyNDU5,size_16,color_FFFFFF,t_70)
+[Hadoop3.2.2下载](https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz) bfsu这个镜像下载最快![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/HadoopDownload.png)
 [Hbase2.4.2下载](https://www.apache.org/dyn/closer.lua/hbase/2.4.2/hbase-2.4.2-bin.tar.gz)
 
 [Hive3.1.2下载](https://mirrors.bfsu.edu.cn/apache/hive/hive-3.1.2/)选择bin.tar.gz
