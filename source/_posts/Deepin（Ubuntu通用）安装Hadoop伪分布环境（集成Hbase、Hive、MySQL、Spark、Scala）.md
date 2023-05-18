@@ -13,8 +13,8 @@ tags:
 cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop0.png
 ---
 # 安装版本
-Hadoop3.2.2、Hbase2.4.17、Hive3.1.2、MySQL8.0.24、Spark3.1.1、Scala2.13.5
-（即使可以，也不推荐使用apt安装，因为版本会报错，所有我下面均使用压缩包来安装）
+jdk8、Hadoop3.2.2、Hbase2.4.17、Hive3.1.2、MySQL8.0.24、Spark3.1.1、Scala2.13.5
+（版本不对会报错，我下面均使用压缩包来安装对应版本）
 
 # 下载所有环境
 [Hadoop3.2.2下载](https://archive.apache.org/dist/hadoop/common/hadoop-3.2.2/) bfsu这个镜像下载最快![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/HadoopDownload.png)
@@ -43,7 +43,7 @@ Hadoop3.2.2、Hbase2.4.17、Hive3.1.2、MySQL8.0.24、Spark3.1.1、Scala2.13.5
 
 #  安装Hadoop
 #### 1、安装和配置ssh
-首先在终端输入sudo apt-get update来更新一下apt的包列表（apt代表赋予管理员权限，建议每句命令都加上）
+首先在终端输入sudo apt update来更新一下apt的包列表（apt代表赋予管理员权限，建议每句命令都加上）
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop6.png)
 输入sudo apt-get install openssh-server回车，再输入sudo apt-get install openssh-client回车（Deepin可能已经预装了ssh，不过再输入一下确认一下也没什么）
 Ubuntu安装是如下界面
@@ -79,7 +79,7 @@ $ ssh localhost     #此时已不需密码即可登录localhost，并可见下�
 ```
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop10.png)
 
-#### 2、安装和配置Java（一定要安装Java11版本之前的，不然Spark和Scala会报错，我们安装Java8）
+#### 2、安装和配置Java（一定要安装Java8版本，不然Hive、Spark和Scala会报错）
 
 输入apt-cache search openjdk ,这是查看可以安装的Java版本有哪些，查询结果显示如下，我们可以看到，又openjdk-8-jdk
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop11.png)![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop47.png)
