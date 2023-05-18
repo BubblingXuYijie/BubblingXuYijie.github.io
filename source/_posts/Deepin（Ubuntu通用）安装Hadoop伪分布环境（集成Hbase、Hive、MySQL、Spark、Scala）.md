@@ -253,6 +253,30 @@ Hadoop 的运行方式是由配置文件决定的，因此如果需要从伪分�
 
 关闭Hadoop服务的命令是stop-dfs.sh
 
+如果启动出现如下报错
+
+`ERROR: Attempting to operate on hdfs namenode as root`
+
+`ERROR: but there is no HDFS_NAMENODE_USER defined. Aborting operation.`
+
+修改hadoop/sbin下面的start-dfs.sh和stop-dfs.sh，添加内容
+
+```shell
+HDFS_ZKFC_USER=root
+HDFS_JOURNALNODE_USER=root
+HDFS_NAMENODE_USER=root
+HDFS_SECONDARYNAMENODE_USER=root
+HDFS_DATANODE_USER=root
+HDFS_DATANODE_SECURE_USER=root
+```
+
+修改start-yarn.sh和stop-yarn.sh，添加内容
+```shell
+HDFS_DATANODE_SECURE_USER=root
+YARN_NODEMANAGER_USER=root
+YARN_RESOURCEMANAGER_USER=root
+```
+
 #  安装Hbase
 #### 1、解压Hbase
 参考解压hadoop进行解压
