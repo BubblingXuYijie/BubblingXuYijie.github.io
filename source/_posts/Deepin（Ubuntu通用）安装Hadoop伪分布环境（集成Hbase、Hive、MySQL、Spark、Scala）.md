@@ -38,6 +38,9 @@ Hadoop3.2.2、Hbase2.4.17、Hive3.1.2、MySQL8.0.24、Spark3.1.1、Scala2.13.5
 # 开启Deepin或Ubuntu（我用的是虚拟机）
 我用的是Deepin20（Debian10 Buster库）好看吧， 还有“QQ2008”
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop5.png)
+
+---
+
 #  安装Hadoop
 #### 1、安装和配置ssh
 首先在终端输入sudo apt-get update来更新一下apt的包列表（apt代表赋予管理员权限，建议每句命令都加上）
@@ -120,6 +123,9 @@ export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$HBASE_HOME/bin:${JAVA_HOME
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop15.png)
 检查Java版本，安装并配置成功
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop16.png)
+
+---
+
 #### 3、安装Hadoop
 我们把下载好的Hadoop安装包放在“下载”文件夹里，Deepin下载的默认路径就是这个
 
@@ -277,6 +283,8 @@ YARN_NODEMANAGER_USER=root
 YARN_RESOURCEMANAGER_USER=root
 ```
 
+---
+
 #  安装Hbase
 #### 1、解压Hbase
 参考解压hadoop进行解压
@@ -342,8 +350,12 @@ export HBASE_DISABLE_HADOOP_CLASSPATH_LOOKUP="true"
 添加一个学生信息
 查看学生信息
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop30.png)
-退出shell输入exit回车
+
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop31.png)
+
+退出shell输入exit回车
+
+---
 
 #  安装Hive
 ####  1、安装Hive
@@ -473,6 +485,9 @@ export HADOOP_HOME=/usr/local/hadoop/
 export HIVE_CONF_DIR=/usr/local/hive/conf/
 export HIVE_AUX_JARS_PATH=/usr/local/hive/lib
 ```
+
+---
+
 #### 2、安装MySQL
 MySQL可以使用apt安装，Deepin默认的MySQL就是最新版，Ubuntu我不知道是不是，可以使用下面命令看一下版本
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop33.png)
@@ -527,6 +542,9 @@ flush privileges;  #刷新mysql系统权限关系表
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop41.png)
 启动成功，输入exitl;可退出hive shell
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop42.png)
+
+---
+
 #  安装Spark
 ####  1、安装Scala语言支持
 解压不再赘述，请看安装Haoop板块介绍的方法，安装好查看版本
@@ -565,6 +583,9 @@ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$HADOOP_HOME/lib/native
 #### 4、开启Spark Shell
 spark shell的退出命令是 :quit
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop46.png)
+
+---
+
 # 结语
 4.10：好了这篇文章到这就暂时结束了，Linux真sd，这系非人类，虽然早就配好了，但是等我心情好了再写吧
 4.29：心情不错，正在更新
