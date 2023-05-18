@@ -376,7 +376,7 @@ $ sudo gedit hive-site.xml
 <configuration>
     <property>
 	  <name>javax.jdo.option.ConnectionURL</name>
-	  <value>jdbc:mysql://localhost:3306/metastore?createDatabaseIfNotExist=true</value>
+	  <value>jdbc:mysql://localhost:3306/hive?createDatabaseIfNotExist=true</value>
 	  <description>JDBC connect string for a JDBC metastore</description>
 	</property>
 
@@ -533,12 +533,13 @@ GRANT ALL ON *.* TO 'hive'@'localhost';
 ```sql
 flush privileges;  #刷新mysql系统权限关系表
 ```
+再新建一个数据库叫hive
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop40.png)
+
 #### 3、启动Hive
 启动Hive之前，先运行start-all.sh启动Hadoop集群，然后输入hive启动
 
-如果输入hive以后出现下面报错
-![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop40.png)
-则输入hdfs dfsadmin -safemode leave关闭安全模式，再运行hive即可
+如果输入hive以后出现下面报错 ，则输入hdfs dfsadmin -safemode leave关闭安全模式，再运行hive即可
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop41.png)
 启动成功，输入exitl;可退出hive shell
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop42.png)
