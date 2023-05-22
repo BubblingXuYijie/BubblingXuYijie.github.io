@@ -338,13 +338,13 @@ export HBASE_MANAGES_ZK=true
 export HBASE_CLASSPATH=/usr/local/hbase/conf
 export HBASE_DISABLE_HADOOP_CLASSPATH_LOOKUP="true"
 ```
+
 然后就可以启动Hbase了，注意，启动Hbase之前先启动Hadoop，关闭Hbase的命令是stop-hbase.sh
-![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop27.png)
-可以localhost:60010访问Hbase页面
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop28.png)
+可以localhost:60010访问Hbase页面
+![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop29.png)
 ####  3、hbase shell的基本操作
 输入hbase shell可以打开hbase shell
-![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop29.png)
 建个表
 查看表属性
 添加一个学生信息
