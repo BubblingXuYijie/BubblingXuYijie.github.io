@@ -466,7 +466,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Objects;
 
 /**
  * @author 徐一杰
@@ -491,7 +490,7 @@ public class KafkaHandler {
      */
     @KafkaListener(topics = {"topic1", "topic2"}, errorHandler = "myKafkaListenerErrorHandler")
 //    @KafkaListener(id = "${spring.kafka.consumer.group-id}", topics = {"topic1", "topic2"}, autoStartup = "false")
-    public void listen1(ConsumerRecord<Object, Objects> consumerRecord, Acknowledgment ack) {
+    public void listen1(ConsumerRecord<Object, Object> consumerRecord, Acknowledgment ack) {
         try {
             //用于测试异常处理
             //int i = 1 / 0;
