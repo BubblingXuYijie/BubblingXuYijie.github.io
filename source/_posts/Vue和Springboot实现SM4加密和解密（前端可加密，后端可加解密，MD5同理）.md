@@ -179,7 +179,7 @@ methods:{
 <dependency>
   <groupId>commons-codec</groupId>
     <artifactId>commons-codec</artifactId>
-    <version>1.10</version>
+    <version>1.16.0</version>
 </dependency>
 ```
 
