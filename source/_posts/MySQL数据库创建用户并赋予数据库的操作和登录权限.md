@@ -14,8 +14,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MysqlLogo.jpg
 
 <font color=#999AAA >可以设置用户对某个数据库的某个表的增删改查权限，还能限制操作 IP </font>
 
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
-
+---
 #  第一种方法
 
 ## 一、创建一个新用户 test ，密码设置为 123456</font>
@@ -25,7 +24,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/MysqlLogo.jpg
 CREATE USER 'test'@'%' IDENTIFIED BY '123456';
 ```
 
-
+---
 
 ## 二、赋予用户权限
 
@@ -36,6 +35,14 @@ CREATE USER 'test'@'%' IDENTIFIED BY '123456';
 ```bash
 grant all privileges on *.* to 'yj_gongdian'@'%';
 ```
+
+`如果是修改已有用户的权限，这样写`
+
+```bash
+grant all privileges on *.* to 'root'@'%' identified by 'yourPassword' with grant option;
+```
+
+---
 
 ###  赋予部分表的部分权限
 
@@ -54,14 +61,16 @@ create table students;
 grant select on school.students to test@111.111.111.111;
 ```
 
-<font color=#999AAA >三、刷新权限
+---
+
+# 三、刷新权限
 
 必须刷新，不然不生效
 
 ```bash
 flush privileges;
 ```
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+---
 
 
 #  第二种方法
@@ -73,7 +82,7 @@ INSERT INTO user(host,user,password,select_priv,insert_priv,update_priv) VALUES(
 flush privileges;
 ```
 
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+---
 
 # 总结
 

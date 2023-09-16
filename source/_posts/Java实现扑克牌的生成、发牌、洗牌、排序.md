@@ -6,14 +6,16 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/javaLogo.png
 ---
 ## 需求
 
->1、生成一副斗地主的扑克牌
-2、输出洗牌后的扑克
-3、发牌，并留下的3张底牌
-4、排序三人的牌
+> - 1、生成一副斗地主的扑克牌
+> - 2、输出洗牌后的扑克
+> - 3、发牌，并留下的3张底牌
+> - 4、排序三人的牌
 
 ## 源码
 
 > 看代码注释哦
+
+## 方案一（暴力模式，就硬排）
 
 ```java
 import java.util.*;
@@ -148,5 +150,81 @@ public class DouDiZhu {
 
 ## 输出结果
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/洗牌.png)
+
+---
+
+## Map方法（较优雅）
+
+> 前面的发牌方法都一样，就是构建扑克的时候，把花色和数字组合起来，当作map的key加进去，序号当做value，序号也就是排序序号
+
+```java
+import java.util.*;
+
+/**
+ * @author 徐一杰
+ */
+public class MapSortPai {
+    public static void main(String[] args) {
+        //构建一副扑克
+        List<String> shapes = List.of("♠", "♥", "♣", "♦");
+        List<String> numbers = List.of("2", "A", "K", "Q", "J", "10", "9", "8", "7", "6", "5", "4", "3");
+        Map<String, Integer> pokeMap = new HashMap<>();
+        pokeMap.put("大王", 0);
+        pokeMap.put("小王", 1);
+        int sort = 2;
+        for(String n : numbers){
+            for (String s : shapes) {
+                pokeMap.put(s + n, sort);
+                sort++;
+            }
+        }
+        System.out.println("扑克哈希表：" + pokeMap);
+
+        List<String> pokeList = new ArrayList<>();
+        for (Map.Entry<String, Integer> entry : pokeMap.entrySet()) {
+            pokeList.add(entry.getKey());
+        }
+        //洗牌
+        Collections.shuffle(pokeList);
+        System.out.println("洗牌之后：" + pokeList);
+
+        //开始发牌
+        String pai;
+        List<String> me = new ArrayList<>();
+        List<String> jzy = new ArrayList<>();
+        List<String> hgh = new ArrayList<>();
+        List<String> dipai = new ArrayList<>();
+        for (int i = 0; i < pokeList.size(); i++) {
+            pai = pokeList.get(i);
+            if (i >= 51) {
+                dipai.add(pai);
+            } else if (i % 3 == 0) {
+                me.add(pai);
+            } else if (i % 3 == 1) {
+                jzy.add(pai);
+            } else {
+                hgh.add(pai);
+            }
+        }
+        System.out.println("开始发牌");
+        System.out.println("底牌" + dipai);
+        System.out.println("排序前我的牌：" + me);
+        System.out.println("排序前Jzy的牌：" + jzy);
+        System.out.println("排序前Hgh的牌：" + hgh);
+        System.out.println();
+
+        me.sort(Comparator.comparingInt(pokeMap::get));
+        jzy.sort(Comparator.comparingInt(pokeMap::get));
+        hgh.sort(Comparator.comparingInt(pokeMap::get));
+        System.out.println("排序后我的牌：" + me);
+        System.out.println("排序后Jzy的牌：" + jzy);
+        System.out.println("排序后Hgh的牌：" + hgh);
+    }
+}
+```
+
+---
+
+# 结语
 
 > 不太喜欢研究算法，用的是都能看懂的笨办法，如果有大佬有更棒的排序方案，一定要叫我去观摩！
