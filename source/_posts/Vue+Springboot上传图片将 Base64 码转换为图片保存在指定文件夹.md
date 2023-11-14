@@ -19,7 +19,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Base640.png
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>Base64Utils</artifactId>
-    <version>1.2.8</version>
+    <version>1.2.9</version>
 </dependency>
 ```
 ```java
@@ -27,17 +27,15 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Base640.png
 String s = Base64Util.transferToBase64("D:/下载/Screenshot_20221008-090627.png");
 File file = new File(filePath);
 String s = Base64Util.transferToBase64(file);
-//打印转换的base64
 System.out.println(s);
-
-
-// 将Base64转换成文件保存到指定位置，可传入文件全路径或者分别传入保存位置和文件名，s是base64码
-String s1 = Base64Util.generateFile(s, "D:/下载/aaa.png");
+// 将Base64转换成文件保存到指定位置，可传入文件全路径或者分别传入保存位置和文件名，路径分隔符可使用/或\
+String s1 = Base64Util.generateFile(s, "D:\\下载\\aaa.png");
 String s1 = Base64Util.generateFile(s, "D:/下载", "aaa.png");
-//当你不知道前端传来的文件类型时，可以不写文件类型后缀，代码会自动判断文件类型
-String s1 = Base64Util.generateFile(s, "D:/下载/aaa");
-//打印保存路径
 System.out.println(s1);
+//也可以从base64获取文件对象呵呵流，或者文件类型
+File file = Base64Util.getFile("D:/下载/a.png");
+FileInputStream fileInputStream = Base64Util.getFileStream("D:/下载/a.png");
+String fileType = Base64Util.getFileType("base64Str");
 ```
 
 ---
