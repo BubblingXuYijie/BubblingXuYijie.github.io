@@ -26,7 +26,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>SM4Utils</artifactId>
-    <version>1.4.5</version>
+    <version>1.4.7</version>
 </dependency>
 ```
 
@@ -166,7 +166,7 @@ methods:{
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>SM4Utils</artifactId>
-    <version>1.4.5</version>
+    <version>1.4.7</version>
 </dependency>
 ```
 

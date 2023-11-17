@@ -19,7 +19,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Base640.png
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>Base64Utils</artifactId>
-    <version>1.3.0</version>
+    <version>1.3.1</version>
 </dependency>
 ```
 ```java
