@@ -18,7 +18,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 
 `加密源代码网上有很多，但是代码语法和jar包陈旧，导致新版本jdk无法运行；以及 js 使用的语法太旧，导致 Vue 编译不通过（即使不使用 ESLint也不通过），所以我这个在他们的基础上修改了，后端只需引入一个依赖，前端语法已经规范修改，而且可通过 ESLint 的检测。`
 
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+---
 
 > 另外前后端的 SM4 加解密我已经上传到 npm 和 maven 中央仓库了，你们可以 npm install sm4util 和 引入到 pom 使用
 ```xml
@@ -26,7 +26,7 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>SM4Utils</artifactId>
-    <version>1.4.7</version>
+    <version>1.4.8</version>
 </dependency>
 ```
 
@@ -41,7 +41,8 @@ const sm4 = new SM4Util();
 sm4.encryptDefault_ECB('123456');
 ```
 
->  ECB 加密模式
+```java
+// ECB 加密模式
 //不使用自定义 secretKey，一般用于后端自行加解密，如果是前端加密后端解密，则需要自定义secretKey，secretKey一致才能正确解密
 System.out.println("经过ECB加密的密文为：" + SM4Utils.encryptData_ECB("123456"));
 System.out.println("经过ECB解密的密文为：" + SM4Utils.decryptData_ECB("UQZqWWcVSu7MIrMzWRD/wA=="));
@@ -49,12 +50,13 @@ System.out.println("经过ECB解密的密文为：" + SM4Utils.decryptData_ECB("
 System.out.println("经过ECB加密的密文为：" + SM4Utils.encryptData_ECB("123456"));
 System.out.println("经过ECB解密的密文为：" + SM4Utils.decryptData_ECB("UQZqWWcVSu7MIrMzWRD/wA=="));
 
-> CBC 加密模式（更加安全）需要两个密钥 secretKey 和 iv
+// CBC 加密模式（更加安全）需要两个密钥 secretKey 和 iv
 System.out.println("经过CBC加密的密文为：" + SM4Utils.encryptData_CBC("123456"));
 System.out.println("经过CBC解密的密文为：" + SM4Utils.decryptData_CBC("hbMK6/IeJ3UTzaTgLb3f3A=="));
 //同样可以自定义 secretKey 和 iv，需要两个密钥前后端都一致
 System.out.println("经过CBC加密的密文为：" + SM4Utils.encryptData_CBC("123456", "asdfghjklzxcvb!_", "1234567890123456"));
 System.out.println("经过CBC解密的密文为：" + SM4Utils.decryptData_CBC("sTyCl3G6TF311kIENzsKNg==", "asdfghjklzxcvb!_", "1234567890123456"));
+```
 
 [SM4前后端加解密下载链接](https://download.csdn.net/download/qq_48922459/85001193)
 有很多用户反映CSDN这个资源要什么下载码，我下面放一个github的仓库，里面有文件和演示demo
@@ -74,7 +76,7 @@ rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
   },
-  "globals":{
+  "globals": {
     "base64js": true,
   }
 ```
@@ -120,7 +122,6 @@ const sm4 = new SM4Util();
 </template>
 <script>
 import {SM4Util} from '@/utils/sm4';
-import {Notify} from "vant";
 export default {
   name: "Register",
   data(){
@@ -156,7 +157,7 @@ methods:{
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SM4加密3.png)
 
 
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+---
 
 
 # 二、Springboot 后端进行 SM4 的解密和加密
@@ -166,9 +167,13 @@ methods:{
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>SM4Utils</artifactId>
-    <version>1.4.7</version>
+    <version>1.4.8</version>
 </dependency>
 ```
+
+---
+
+> 下面是一些源码示例
 
 ## 引入库
 
@@ -193,7 +198,7 @@ methods:{
 [SM4前后端加解密Demo Github地址](https://github.com/XuYijie000416/SM4EncryptAndDecrypt)
 
 
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+---
 
 
 ## 调用方法
@@ -208,9 +213,7 @@ methods:{
 
 <font color=#999AAA >ECB 和 CBC 的区别你们可以自己了解一些，反正用 CBC 就完事了，据说更安全
 
-
-
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+---
 
 # 总结
 <font color=#999AAA >这是一个总结
