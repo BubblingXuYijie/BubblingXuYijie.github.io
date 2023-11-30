@@ -7,6 +7,7 @@ tags:
     - HTML
     - Vue
 cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/全屏樱花飘落0.gif
+sticky: 4
 ---
 
 # 前言

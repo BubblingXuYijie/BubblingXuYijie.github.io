@@ -27,14 +27,14 @@ cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 
 ![在这里插入图片描述](https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/SpringbootAOP1.png)
 
-<font color=#999AAA >完成后我们向 ==pom.xml== 中添加一条依赖，用于日志的拦截和输出
+<font color=#999AAA >完成后我们向`pom.xml`中添加一条依赖，用于日志的拦截和输出
 
 ```xml
-	<!--aop-->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-aop</artifactId>
-    </dependency>
+<!--aop-->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-aop</artifactId>
+</dependency>
 ```
 
 
