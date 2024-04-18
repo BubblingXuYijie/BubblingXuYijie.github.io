@@ -1,12 +1,13 @@
 ---
 title: Nginx 配置 SSL 证书（网站变为 HTTPS）
 date: 2021-12-31 10:24:19
-categories: Python
+categories:
+  - Nginx
 tags:
-    - Nginx
-    - SSL
-    - HTTPS
-    - Linux
+  - Nginx
+  - SSL
+  - HTTPS
+  - Linux
 cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/NginxLogo.png
 ---
 # 前言

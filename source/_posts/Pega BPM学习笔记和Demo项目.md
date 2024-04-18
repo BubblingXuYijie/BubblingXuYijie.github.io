@@ -1,11 +1,12 @@
 ---
 title: Pega BPM学习笔记和Demo项目
 date: 2022-09-06 17:18:52
-categories: Pega
+categories: 
+  - Pega
 tags:
-    - Pega
-    - RPA
-    - BPM
+  - Pega
+  - RPA
+  - BPM
 cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/PegaLogo.jpg
 ---
 #  前言
