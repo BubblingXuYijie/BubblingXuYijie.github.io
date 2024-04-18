@@ -1,10 +1,11 @@
 ---
 title: Springboot使用logback配置彩色日志
 date: 2024-04-18 19:18:01
-categories: Java
+categories:
+  - Java
 tags:
-    - SpringBoot
-    - logback
+  - SpringBoot
+  - logback
 cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/彩色日志.png
 ---
 

@@ -6,7 +6,7 @@ categories:
 tags:
   - SpringBoot
   - logback
-cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/彩色日志.png
+cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Rust下载界面.png
 ---
 
 # 前言
