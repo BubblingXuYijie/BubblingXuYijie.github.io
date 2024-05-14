@@ -1,13 +1,13 @@
 ---
 title: 使用纯JavaScript实现全网页动态樱花飘落特效
 date: 2020-06-29 19:16:10
-categories: Web前端
+categories:
+  - Web前端
 tags:
-    - JavaScript
-    - HTML
-    - Vue
+  - JavaScript
+  - HTML
+  - Vue
 cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/全屏樱花飘落0.gif
-sticky: 4
 ---
 
 # 前言

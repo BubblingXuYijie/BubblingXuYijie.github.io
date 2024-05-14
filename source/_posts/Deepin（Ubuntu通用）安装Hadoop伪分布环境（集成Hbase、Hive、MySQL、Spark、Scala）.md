@@ -1,15 +1,16 @@
 ---
 title: Deepin（Linux）安装Hadoop伪分布环境（集成Hbase、Hive、MySQL、Spark、Scala）
 date: 2021-04-08 12:14:25
-categories: Linux
+categories:
+  - Linux
 tags:
-    - Deepin
-    - Ubuntu
-    - Debian
-    - Hadoop
-    - Hbase
-    - Hive
-    - Spark
+  - Deepin
+  - Ubuntu
+  - Debian
+  - Hadoop
+  - Hbase
+  - Hive
+  - Spark
 cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/DebianHadoop0.png
 ---
 # 安装版本

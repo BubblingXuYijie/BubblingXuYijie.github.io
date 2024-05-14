@@ -1,12 +1,13 @@
 ---
 title: Springboot 配置线程池创建线程和配置 @Async 异步操作线程池
 date: 2022-09-20 15:34:14
-categories: Linux
+categories:
+  - Linux
 tags:
-    - SpringBoot
-    - 异步
-    - 多线程
-    - 线程池
+  - SpringBoot
+  - 异步
+  - 多线程
+  - 线程池
 cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 ---
 # 前言

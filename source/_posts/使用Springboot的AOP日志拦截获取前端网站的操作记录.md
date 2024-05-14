@@ -1,9 +1,10 @@
 ---
 title: 使用Springboot的AOP日志拦截获取前端网站的操作记录
 date: 2021-12-08 21:50:41
-categories: Java
+categories:
+  - Java
 tags:
-    - SpringBoot
+  - SpringBoot
 cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 ---
 # 前言

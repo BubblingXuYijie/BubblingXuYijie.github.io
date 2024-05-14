@@ -1,5 +1,5 @@
 ---
-title: Springboot使用logback配置彩色日志
+title: Spring boot使用logback配置彩色日志
 date: 2024-04-18 19:18:01
 categories:
   - Java
