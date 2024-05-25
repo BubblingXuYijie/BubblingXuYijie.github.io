@@ -23,127 +23,151 @@ import java.util.*;
 public class DouDiZhu {
     public static void main(String[] args) {
         //构建一副扑克
-        List<String> pokes = new ArrayList<>();
-        List<String> colors = new ArrayList<>(Arrays.asList("♠", "♥", "♣", "♦"));
+        List<String> pokeList = new ArrayList<>();
+        List<String> shapes = new ArrayList<>(Arrays.asList("♠", "♥", "♣", "♦"));
         List<String> numbers = new ArrayList<>(Arrays.asList("3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A", "2"));
-        for (String c : colors){
-            for(String n : numbers){
-                pokes.add(c + n);
+        for (String s : shapes) {
+            for (String n : numbers) {
+                pokeList.add(s + n);
             }
         }
-        pokes.add("小王");
-        pokes.add("大王");
+        pokeList.add("小王");
+        pokeList.add("大王");
+        System.out.println("构建一副扑克：" + pokeList);
         //洗牌
-        Collections.shuffle(pokes);
-        System.out.println("洗牌之后：" + pokes);
+        Collections.shuffle(pokeList);
+        System.out.println("洗牌之后：" + pokeList);
         System.out.println();
 
         //开始发牌
         String pai;
-        ArrayList<String> me = new ArrayList<>();
-        ArrayList<String> jzy = new ArrayList<>();
-        ArrayList<String> hgh = new ArrayList<>();
-        ArrayList<String> dipai = new ArrayList<>();
-        for (int i = 0; i < pokes.size(); i++) {
-            pai = pokes.get(i);
-            if (i >= 51){
+        List<String> me = new ArrayList<>();
+        List<String> jzy = new ArrayList<>();
+        List<String> hgh = new ArrayList<>();
+        List<String> dipai = new ArrayList<>();
+        for (int i = 0; i < pokeList.size(); i++) {
+            pai = pokeList.get(i);
+            if (i >= 51) {
                 dipai.add(pai);
-            }else if (i % 3 == 0){
+            } else if (i % 3 == 0) {
                 me.add(pai);
-            }else if(i % 3 == 1) {
+            } else if (i % 3 == 1) {
                 jzy.add(pai);
-            }else {
+            } else {
                 hgh.add(pai);
             }
         }
+        System.out.println("开始发牌");
         System.out.println("底牌" + dipai);
         System.out.println("排序前我的牌：" + me);
         System.out.println("排序前Jzy的牌：" + jzy);
         System.out.println("排序前Hgh的牌：" + hgh);
         System.out.println();
 
-        //开始排序，以“我”的牌为例子
+        //开始排序
+        List<String> myFinalPai = DouDiZhu.sortPai(me);
+        List<String> jzyFinalPai = DouDiZhu.sortPai(jzy);
+        List<String> hghFinalPai = DouDiZhu.sortPai(hgh);
+
+        //完成
+        System.out.println("排序后我的牌：" + myFinalPai);
+        System.out.println("排序后Jzy的牌：" + jzyFinalPai);
+        System.out.println("排序后Hgh的牌：" + hghFinalPai);
+    }
+
+    /**
+     * 排序扑克
+     *
+     * @param list 乱序扑克
+     * @return 有序扑克
+     */
+    private static List<String> sortPai(List<String> list) {
+        //paiNumberList存储有序数字牌
         List<String> paiNumberList = new ArrayList<>();
+        //paiCharacterList存储有序数字2和字母牌
         List<String> paiCharacterList = new ArrayList<>();
+        //kingList存储大小王牌
         List<String> kingList = new ArrayList<>();
+
         //先分别取出数字牌、字母牌、大小王
-        for (String tempPai : me){
-            //65以内的ascii码不包括汉字和字母
-            if (tempPai.charAt(1) < 65){
+        for (String tempPai : list) {
+            //这里用字符之间比较大小来区分数字牌、字母牌、大小王
+            if (tempPai.charAt(1) < 'A') {
                 paiNumberList.add(tempPai);
-            } else if (tempPai.charAt(1) > 64 && tempPai.charAt(1) < 91) {
+            } else if (tempPai.charAt(1) >= 'A' && tempPai.charAt(1) <= 'Z') {
                 paiCharacterList.add(tempPai);
             } else {
                 kingList.add(tempPai);
             }
         }
-        System.out.println("我的数字牌：" + paiNumberList);
-        System.out.println("我的字母牌：" + paiCharacterList);
-        System.out.println("我的大小王：" + kingList);
-        System.out.println();
 
         //排序字母牌
         Queue<String> paiCharacterQueue = new ArrayDeque<>(paiCharacterList);
         paiCharacterList.clear();
-        List<String> JList = new ArrayList<>();
-        List<String> QList = new ArrayList<>();
-        List<String> KList = new ArrayList<>();
-        List<String> AList = new ArrayList<>();
+        List<String> jList = new ArrayList<>();
+        List<String> qList = new ArrayList<>();
+        List<String> kList = new ArrayList<>();
+        List<String> aList = new ArrayList<>();
         while (!paiCharacterQueue.isEmpty()) {
             if (paiCharacterQueue.peek().charAt(1) == 'A') {
-                AList.add(paiCharacterQueue.poll());
+                aList.add(0, paiCharacterQueue.poll());
             } else if (paiCharacterQueue.peek().charAt(1) == 'J') {
-                JList.add(paiCharacterQueue.poll());
+                jList.add(0, paiCharacterQueue.poll());
             } else if (paiCharacterQueue.peek().charAt(1) == 'Q') {
-                QList.add(paiCharacterQueue.poll());
+                qList.add(0, paiCharacterQueue.poll());
             } else {
-                KList.add(paiCharacterQueue.poll());
+                kList.add(0, paiCharacterQueue.poll());
             }
         }
-        paiCharacterList.addAll(JList);
-        paiCharacterList.addAll(QList);
-        paiCharacterList.addAll(KList);
-        paiCharacterList.addAll(AList);
+        //按顺序把J、Q、K、A加入到列表
+        paiCharacterList.addAll(aList);
+        paiCharacterList.addAll(kList);
+        paiCharacterList.addAll(qList);
+        paiCharacterList.addAll(jList);
 
         //排序数字牌
-        for (int i = 0;i < paiNumberList.size();i++) {
-            int min = Integer.parseInt(paiNumberList.get(i).substring(1, 2));
+        for (int i = 0; i < paiNumberList.size(); i++) {
+            //获取数字
+            int max = Integer.parseInt(paiNumberList.get(i).substring(1, 2));
+            //两位数情况
             if (paiNumberList.get(i).length() == 3) {
-                min = Integer.parseInt(paiNumberList.get(i).substring(1, 3));
+                max = Integer.parseInt(paiNumberList.get(i).substring(1, 3));
             }
-            //处理2的特殊情况
-            if (min == 2) {
-                paiCharacterList.add("2");
+            //处理2的特殊情况，直接加入到paiCharacterList头部，因为2正好比A大
+            if (max == 2) {
+                paiCharacterList.add(0, paiNumberList.get(i));
                 continue;
             }
-            for (int j = i + 1;j < paiNumberList.size();j++) {
-                int min2 = Integer.parseInt(paiNumberList.get(j).substring(1, 2));
+            for (int j = i + 1; j < paiNumberList.size(); j++) {
+                int maxNew = Integer.parseInt(paiNumberList.get(j).substring(1, 2));
                 if (paiNumberList.get(j).length() == 3) {
-                    min2 = Integer.parseInt(paiNumberList.get(j).substring(1, 3));
+                    maxNew = Integer.parseInt(paiNumberList.get(j).substring(1, 3));
                 }
-                if (min > min2 && min2 != 2) {
+                //按大小交换list的数据位置，类似选择排序的思想
+                if (max < maxNew) {
                     String a = paiNumberList.get(i);
                     String b = paiNumberList.get(j);
                     paiNumberList.set(i, b);
                     paiNumberList.set(j, a);
-                    min = min2;
+                    max = maxNew;
                 }
             }
         }
+        //去掉为2的牌，因为上面已经处理过特殊情况，2被加入到了paiCharacterList里面
         paiNumberList.removeIf(item -> item.contains("2"));
-        paiNumberList.addAll(paiCharacterList);
 
-        //排序大小王
+        //合并存储最终所有有序扑克
+        List<String> finalPokeList = new ArrayList<>();
         if (kingList.size() == 2) {
-            paiNumberList.add("小王");
-            paiNumberList.add("大王");
+            finalPokeList.add("小王");
+            finalPokeList.add("大王");
         } else {
-            paiNumberList.addAll(kingList);
+            finalPokeList.addAll(kingList);
         }
+        finalPokeList.addAll(paiCharacterList);
+        finalPokeList.addAll(paiNumberList);
 
-        //完成
-        System.out.println("排序后我的牌：" + paiNumberList);
-
+        return finalPokeList;
     }
 }
 ```
