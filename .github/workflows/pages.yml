@@ -1,4 +1,4 @@
-name: Pages
+name: 部署泡泡的博客
 
 on:
   push:
