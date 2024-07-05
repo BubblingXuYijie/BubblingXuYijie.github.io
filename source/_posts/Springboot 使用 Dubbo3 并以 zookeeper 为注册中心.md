@@ -10,6 +10,7 @@ tags:
     - RPC
 cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/Dubbo.jpg
 ---
+
 # 前言
 > `dubbo`：简单来讲就是一个 RPC 调用框架，类似于 SpringCloud + OpenFeign，支持 nacos、zookeeper 等注册中心，拥有图形界面，可使用界面管理 zookeeper 的节点信息
 > `zookeeper`：是一个微服务注册中心，将一个个 Java 项目注册到 zookeeper，然后使用 openfeign 或者 dubbo 就可以实现这些 Java 项目之间的互相调用

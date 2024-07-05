@@ -9,6 +9,7 @@ tags:
     - 数据加密
 cover: https://qiniuoss.xuyijie.icu/XuYijieBlog/BlogImage/springbootLogo.jpeg
 ---
+
 # 前言
 
 <font color=#999AAA >网站配置 https 比较麻烦，所以为了我们的用户账户安全，密码在从前端传输到后端的过程中，最好加密一下，选用 SM4 有两个原因，一是国产加密算法，二是这个国密算法是对称的，只要加密和解密的 key 和 vi 相同，可以很容易的解密，同时需要匹配 key 和 vi 又兼顾了安全。</font>
