@@ -20,11 +20,11 @@ cover: https://qiniuoss.xuyijie.icu/SecureApiDoc/img/logo/logo.png
 
 # 简介
 
-> - SecureApi一款接口参数和返回值加解密工具，高性能、轻量化，无任何外部依赖；
+> - SecureApi 是一款接口参数和返回值加解密工具，高性能、轻量化，无任何外部依赖；
 >
-> - spring boot场景启动器设计（支持spring boot2和3），完全自动化，支持param、body参数（暂不支持path参数），用户无需关心加密解密和密钥匹配过程；
+> - spring boot 场景启动器设计（支持spring boot2和3），完全自动化，支持 param、body 参数（暂不支持 path 参数），用户无需关心加密解密和密钥匹配过程；
 >
-> - 配置灵活，配置文件支持yml和bean方式，支持注解、url正则进行接口匹配，支持AES、SM4、RSA等多种加密方式，支持DM前后端密钥协商方式。
+> - 配置灵活，配置文件支持 yml 和 bean 方式，支持注解、url正则进行接口匹配，支持 AES、SM4、RSA 等多种加密方式，支持 DH 前后端密钥协商方式。
 
 `用户增量趋势`
 
