@@ -38,7 +38,7 @@ cover: https://qiniuoss.xuyijie.icu/SecureApiDoc/img/logo/logo.png
 
 ==Gitee地址(非主要，issue还是集中在Github比较好，大家都可以看到)== [https://gitee.com/BubblingXuYijie/secure-api-spring-boot](https://gitee.com/BubblingXuYijie/secure-api-spring-boot)
 
-一些问题你们会在`文档`中或者Github的`issue`里找到答案，如果你不知道前端如何配合，那么`文档里有你想要的东西`
+一些问题你们会在`文档`中或者Github的 [issue](https://github.com/BubblingXuYijie/secure-api-spring-boot/issues?q=) 里找到答案，如果你不知道前端如何配合，那么`文档里有你想要的东西`
 
 ---
 # 安装
@@ -54,16 +54,16 @@ cover: https://qiniuoss.xuyijie.icu/SecureApiDoc/img/logo/logo.png
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>secure-api-spring-boot-starter</artifactId>
-    <!--spring boot 3 请引入 3.0.2 版本-->
-    <version>2.0.9</version>
+    <!--spring boot 3 请引入 3.0.3 版本-->
+    <version>2.1.0</version>
 </dependency>
 ```
 
 `Gradle`
 
 ```groovy
-// spring boot 3 请引入 3.0.2 版本
-implementation 'icu.xuyijie:secure-api-spring-boot-starter:2.0.9'
+// spring boot 3 请引入 3.0.3 版本
+implementation 'icu.xuyijie:secure-api-spring-boot-starter:2.1.0'
 ```
 
 ---
@@ -235,4 +235,4 @@ public class SecureApiConfig {
 
 ==Gitee地址(非主要，issue还是集中在Github比较好，大家都可以看到)== [https://gitee.com/BubblingXuYijie/secure-api-spring-boot](https://gitee.com/BubblingXuYijie/secure-api-spring-boot)
 
-一些问题你们会在`文档`中或者Github的`issue`里找到答案，如果你不知道前端如何配合，那么`文档里有你想要的东西`
+一些问题你们会在`文档`中或者Github的 [issue](https://github.com/BubblingXuYijie/secure-api-spring-boot/issues?q=) 里找到答案，如果你不知道前端如何配合，那么`文档里有你想要的东西`
