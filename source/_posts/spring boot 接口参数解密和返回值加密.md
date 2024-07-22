@@ -91,13 +91,13 @@ secure-api:
   cipher-algorithm: rsa_ecb_sha256
   # session_key模式配置项，与前端协商的会话密钥类型，common模式下此配置不生效
   session-key-cipher-algorithm: aes_ecb_pkcs5
-  # 对称算法用于加解密的密钥，cipher-algorithm选择对称加密算法时配置，也可为空，组件会随机生成一个
+  # 对称算法用于加解密的密钥，Base64格式，cipher-algorithm选择对称加密算法时配置，也可为空，组件会随机生成一个
   key:
-  # 对称算法用于加解密的偏移量，cipher-algorithm选择对称加密算法时配置，也可为空，组件会随机生成一个
+  # 对称算法用于加解密的偏移量，Base64格式，cipher-algorithm选择对称加密算法时配置，也可为空，组件会随机生成一个
   iv:
-  # 非对称算法用于加密的公钥，cipher-algorithm选择非对称加密算法时配置，也可为空，组件会随机生成一对
+  # 非对称算法用于加密的公钥，Base64格式，cipher-algorithm选择RSA非对称加密算法时配置，也可为空，组件会随机生成一对
   public-key:
-  # 非对称算法用于解密的私钥，cipher-algorithm选择非对称加密算法时配置，也可为空，组件会随机生成一对
+  # 非对称算法用于解密的私钥，Base64格式，cipher-algorithm选择RSA非对称加密算法时配置，也可为空，组件会随机生成一对
   private-key:
   # 需要加密的接口路径匹配，遵循spring boot拦截器的正则规则，留空或者不配置代表不使用url匹配，只对注解的接口进行解密
   encrypt-url:
