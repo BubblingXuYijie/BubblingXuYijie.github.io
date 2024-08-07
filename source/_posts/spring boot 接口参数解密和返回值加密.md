@@ -54,16 +54,16 @@ cover: https://qiniuoss.xuyijie.icu/SecureApiDoc/img/logo/logo.png
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>secure-api-spring-boot-starter</artifactId>
-    <!--spring boot 3 请引入 3.0.8 版本-->
-    <version>2.1.5</version>
+    <!--spring boot 3 请引入 3.0.9 版本-->
+    <version>2.1.6</version>
 </dependency>
 ```
 
 `Gradle`
 
 ```groovy
-// spring boot 3 请引入 3.0.8 版本
-implementation 'icu.xuyijie:secure-api-spring-boot-starter:2.1.5'
+// spring boot 3 请引入 3.0.9 版本
+implementation 'icu.xuyijie:secure-api-spring-boot-starter:2.1.6'
 ```
 
 ---
@@ -111,6 +111,14 @@ secure-api:
     include-urls: /**
     # 即使配置了排除，注解的优先级也高于此项
     exclude-urls:
+  # Date类型日期格式化
+  date-format: yyyy-MM-dd HH:mm:ss
+  # LocalDateTime类型日期格式化
+  local-date-time-format: yyyy-MM-dd HH:mm:ss
+  # LocalDate类型日期格式化
+  local-date-format: yyyy-MM-dd
+  # LocalTime类型日期格式化
+  local-time-format: HH:mm:ss
 ```
 
 ## Bean 方式
