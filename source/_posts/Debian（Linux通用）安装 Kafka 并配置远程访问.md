@@ -82,7 +82,7 @@ root@VM-12-15-debian:/data/kafka/kafka_2.13-3.3.1#
 vim config/kraft/server.properties
 ```
 
-`把 advertised.listeners 的 localhost 修改为当前服务器的公网 IP`
+`把 advertised.listeners 的 localhost 修改为当前服务器的公网 IP，如果没有公网 IP 就写 192.168 这样的 IP 即可`
 
 > 修改前
 
