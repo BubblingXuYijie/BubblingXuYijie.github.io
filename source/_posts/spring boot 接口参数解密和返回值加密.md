@@ -54,16 +54,16 @@ cover: https://qiniuoss.xuyijie.icu/SecureApiDoc/img/logo/logo.png
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>secure-api-spring-boot-starter</artifactId>
-    <!--spring boot 3 请引入 3.1.0 版本-->
-    <version>2.1.7</version>
+    <!--spring boot 3 请引入 3.1.1 版本-->
+    <version>2.1.8</version>
 </dependency>
 ```
 
 `Gradle`
 
 ```groovy
-// spring boot 3 请引入 3.1.0 版本
-implementation 'icu.xuyijie:secure-api-spring-boot-starter:2.1.7'
+// spring boot 3 请引入 3.1.1 版本
+implementation 'icu.xuyijie:secure-api-spring-boot-starter:2.1.8'
 ```
 
 ---
