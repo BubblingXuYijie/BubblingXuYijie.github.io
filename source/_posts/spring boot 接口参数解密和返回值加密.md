@@ -104,7 +104,7 @@ secure-api:
     # 配置了此项，接口有无注解都将进行返回值加密
     include-urls: /**
     # 即使配置了排除，注解的优先级也高于此项
-    exclude-urls:
+    exclude-urls: /test1,/test2
   # 需要解密的接口路径匹配，遵循spring boot拦截器的正则规则，留空或者不配置代表不使用url匹配，只对注解的接口、参数、字段进行解密
   decrypt-url:
     # 配置了此项，接口、参数、字段有无注解都将进行解密
