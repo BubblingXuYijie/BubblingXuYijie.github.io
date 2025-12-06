@@ -54,16 +54,16 @@ cover: https://qiniuoss.xuyijie.icu/SecureApiDoc/img/logo/logo.png
 <dependency>
     <groupId>icu.xuyijie</groupId>
     <artifactId>secure-api-spring-boot-starter</artifactId>
-    <!--spring boot 3 请引入 3.1.2 版本-->
-    <version>2.1.9</version>
+    <!--spring boot 3 请引入 3.1.6 版本-->
+    <version>2.2.3</version>
 </dependency>
 ```
 
 `Gradle`
 
 ```groovy
-// spring boot 3 请引入 3.1.2 版本
-implementation 'icu.xuyijie:secure-api-spring-boot-starter:2.1.9'
+// spring boot 3 请引入 3.1.6 版本
+implementation 'icu.xuyijie:secure-api-spring-boot-starter:2.2.3'
 ```
 
 ---
@@ -99,6 +99,8 @@ secure-api:
   public-key:
   # 非对称算法用于解密的私钥，Base64格式，cipher-algorithm选择RSA非对称加密算法时配置，也可为空，组件会随机生成一对
   private-key:
+  # String类型，统一返回体中需要加密的data字段名，配置以后返回值只加密自定义返回体中的指定字段，例如配置为 data
+  response-body-data-field: 
   # 需要加密的接口路径匹配，遵循spring boot拦截器的正则规则，留空或者不配置代表不使用url匹配，只对注解的接口进行解密
   encrypt-url:
     # 配置了此项，接口有无注解都将进行返回值加密
