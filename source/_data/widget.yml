@@ -5,3 +5,4 @@ bottom:
     icon: fas fa-heartbeat
     order:
     html: '<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=5V2tOKp8qAdRM-i8eu7ETTO9ugt5uKbbG-U7Yj8uMl8"></script>'
+#    html: '<a href="https://info.flagcounter.com/LsgI"><img src="https://s05.flagcounter.com/count2/LsgI/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>'
